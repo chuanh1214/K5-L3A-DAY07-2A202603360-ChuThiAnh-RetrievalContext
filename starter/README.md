@@ -61,3 +61,46 @@ Thay đường dẫn trong `< >`. Script tổng hợp nhãn bạn đã chấm, k
 TF-IDF dùng cách tách từ đơn giản. `baseline.py` dùng mặc định context budget 800 ký tự, gồm cả nguồn; chunk không vừa bị bỏ. Bạn có thể chọn cách khác. File kết quả cùng tên sẽ bị ghi đè. `starter/data/` và `starter/results/` không được Git theo dõi mặc định; nếu được phép chia sẻ, dùng `git add -f <đường-dẫn>`, hoặc ghi cách tái tạo. Không nộp dữ liệu mật và secret.
 
 Khung agent ưu tiên giữ chunk từ lần search trước. Khi chunk đầu chiếm gần hết budget, lần search sau có thể không thêm được evidence; hãy kiểm tra trace và thử cách chọn context phù hợp trên dev. Citation ID hợp lệ hoặc verifier trả “đúng” không đảm bảo câu trả lời được hỗ trợ; cần chấm thủ công.
+
+## Cách chạy lại
+
+Chạy từ thư mục gốc dự án bằng PowerShell với Python 3.12:
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r starter/requirements.txt
+python -m unittest discover -s tests -v
+```
+
+Giải pháp phụ thuộc vào dữ liệu và model đã chuẩn bị ở Day 6.
+Cần khởi động PostgreSQL + pgvector của Day 6, có bảng
+day6_chunks với collection thinkpython2_e8412522c5d43b8e,
+strategy B, gồm 321 chunk và embedding 384 chiều.
+
+Biến DAY6 trong starter/dense_baseline.py hiện trỏ tới thư mục
+starter của bài Day 6 trên máy tác giả. Khi chạy ở máy khác,
+cần sửa đường dẫn này cho phù hợp. Thư mục Day 6 cần có
+cấu hình kết nối database và cache model đúng revision
+đã ghi trong phần Dữ liệu và benchmark.
+
+Tạo starter/.env và điền thông tin cá nhân:
+
+```dotenv
+OPENROUTER_API_KEY=THAY_BANG_KEY_CUA_BAN
+OPENROUTER_MODEL=deepseek/deepseek-v4.1-flash-1017
+```
+
+Không đưa .env hoặc API key lên GitHub.
+
+Chạy agent trên dev:
+
+```powershell
+python starter/benchmark_agent.py --questions data/day7_dev_questions.json --split dev --method tfidf --budget 1600 --output starter/results/reproduce-dev-tfidf
+python starter/benchmark_agent.py --questions data/day7_dev_questions.json --split dev --method hybrid --budget 1600 --output starter/results/reproduce-dev-hybrid
+```
+
+Các chương trình benchmark agent không ghi đè thư mục kết quả
+đã tồn tại. Khi chạy lại, chọn tên thư mục đầu ra mới.
+Kết quả và nhãn test được nộp kèm để đối chiếu; không cần
+gọi lại model để xem các kết quả đã báo cáo.
