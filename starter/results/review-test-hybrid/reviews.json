@@ -1,0 +1,78 @@
+[
+  {
+    "query_id": "test_q01",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 94 nêu len trả số ký tự và có nguyên ví dụ fruit='banana', len(fruit)=6.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "Trang 94: chunk định nghĩa len và cho kết quả 6; citation hỗ trợ cả hai phần của câu hỏi."
+    ]
+  },
+  {
+    "query_id": "test_q02",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 98 nêu toán tử in nhận hai chuỗi và trả True nếu chuỗi thứ nhất là substring của chuỗi thứ hai; hai ví dụ a/seed trong banana cũng có trong nguồn.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "Trang 98: chunk chứa định nghĩa, ví dụ 'a' in 'banana' là True và 'seed' in 'banana' là False."
+    ]
+  },
+  {
+    "query_id": "test_q03",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: hai đoạn trang 114 bổ sung nhau, xác nhận append thêm một phần tử, extend thêm mọi phần tử của list đối số. Context có đầu vào t1/t2, kết quả t1.extend(t2) và câu t2 không thay đổi.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "fd266d2cdcc3cb73cc223e2a59a0e21b, trang 114: hỗ trợ append và ví dụ, đồng thời nêu quy tắc extend và các giá trị ban đầu t1/t2.",
+      "821667ea2b810277e5a13f9c5e1b490e, trang 114: có t1.extend(t2), kết quả và t2 unmodified; đọc cùng đầu vào trong đoạn fd266d2cdcc3cb73cc223e2a59a0e21b ở context."
+    ]
+  },
+  {
+    "query_id": "test_q04",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 126 hướng dẫn dùng eng2sp.values() để lấy collection giá trị rồi kiểm tra 'uno' in vals, kết quả True. Đây là toán tử in, không phải yêu cầu gọi hàm print.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "Trang 126: có hướng dẫn values(), vals = eng2sp.values() và 'uno' in vals trả True."
+    ]
+  },
+  {
+    "query_id": "test_q05",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 113 nêu + nối list, * lặp list và [0] * 4 cho [0, 0, 0, 0]. Cụm 'phần tử [0]' chưa chuẩn về thuật ngữ ([0] là list); tuy nhiên câu trả lời đã nêu đúng cơ chế lặp list và kết quả phẳng, nên không coi đây là sai lệch nội dung làm giảm điểm.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "Trang 113: hỗ trợ cả hai toán tử và kết quả ví dụ, dù ID được trích nhiều lần trong answer thì danh sách citations chỉ chứa một ID."
+    ]
+  },
+  {
+    "query_id": "test_u01",
+    "citation_support": [],
+    "reason": "Từ chối đúng sau retrieval: không có hướng dẫn OpenRouter hay số giây timeout do Think Python quy định trong context. Câu trả lời cuối chỉ nói không đủ bằng chứng, không đoán số giây hoặc dùng timeout của code ứng dụng.",
+    "abstention_correct": true,
+    "citation_reasons": []
+  },
+  {
+    "query_id": "test_u02",
+    "citation_support": [],
+    "reason": "Từ chối đúng sau retrieval: mô tả/ví dụ histogram trong context không có log, phần cứng hoặc phép đo phiên chạy cá nhân. Không suy ra số mili giây từ ví dụ; câu trả lời cuối từ chối và không có khẳng định thời gian vô căn cứ.",
+    "abstention_correct": true,
+    "citation_reasons": []
+  }
+]

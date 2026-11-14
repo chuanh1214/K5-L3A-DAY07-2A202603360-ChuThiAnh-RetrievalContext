@@ -1,0 +1,88 @@
+[
+  {
+    "id": "test_q01",
+    "split": "test",
+    "answerable": true,
+    "question": "Hàm len() trả về đại lượng gì khi đối số là một chuỗi? Với fruit = 'banana', sách cho kết quả len(fruit) bằng bao nhiêu?",
+    "expected_answer": "len() trả về số ký tự trong chuỗi. Với fruit = 'banana', len(fruit) bằng 6.",
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "lenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6"
+      }
+    ]
+  },
+  {
+    "id": "test_q02",
+    "split": "test",
+    "answerable": true,
+    "question": "Khi hai toán hạng đều là chuỗi, toán tử in trả về True trong điều kiện nào?",
+    "expected_answer": "Trả về True nếu chuỗi thứ nhất xuất hiện như một chuỗi con trong chuỗi thứ hai.",
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 98,
+        "evidence": "The wordinis a boolean operator that takes two strings and returnsTrueif the first ap-\npears as a substring in the second:"
+      }
+    ]
+  },
+  {
+    "id": "test_q03",
+    "split": "test",
+    "answerable": true,
+    "question": "Theo sách, append và extend khác nhau như thế nào về những phần tử được thêm vào list?",
+    "expected_answer": "append thêm một phần tử mới vào cuối list; extend nhận một list và thêm tất cả phần tử của list đối số.",
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 114,
+        "evidence": "Python provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:"
+      }
+    ]
+  },
+  {
+    "id": "test_q04",
+    "split": "test",
+    "answerable": true,
+    "question": "Muốn kiểm tra 'uno' xuất hiện trong các giá trị của dictionary eng2sp thay vì kiểm tra khóa, sách dùng phương thức nào trước phép in?",
+    "expected_answer": "Dùng eng2sp.values() để lấy tập hợp các giá trị, rồi dùng in trên kết quả, ví dụ vals = eng2sp.values(); 'uno' in vals trả về True trong ví dụ của sách.",
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 126,
+        "evidence": "To see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue"
+      }
+    ]
+  },
+  {
+    "id": "test_q05",
+    "split": "test",
+    "answerable": true,
+    "question": "Với list, toán tử + và toán tử * có tác dụng gì? Trong ví dụ của sách, [0] * 4 cho kết quả nào?",
+    "expected_answer": "Toán tử + nối các list; toán tử * lặp lại list một số lần. [0] * 4 cho [0, 0, 0, 0].",
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 113,
+        "evidence": "The+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]"
+      }
+    ]
+  },
+  {
+    "id": "test_u01",
+    "split": "test",
+    "answerable": false,
+    "question": "Theo chính các trang Think Python trong kho tài liệu, timeout HTTP bắt buộc khi gọi OpenRouter bằng urllib phải được đặt chính xác bao nhiêu giây? Tôi cần con số do tài liệu này quy định, không phải giá trị bạn tự đề xuất.",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus đang đánh giá chỉ gồm 52 trang Think Python đã index, không có hướng dẫn tích hợp OpenRouter hoặc quy định timeout HTTP của dịch vụ này. Đã kiểm tra toàn bộ 321 chunk không có tên OpenRouter và đối chiếu phạm vi corpus chương chuỗi/list/dictionary/tuple. Timeout trong code của ứng dụng RAG không thuộc corpus và không được dùng làm bằng chứng cho sách."
+  },
+  {
+    "id": "test_u02",
+    "split": "test",
+    "answerable": false,
+    "question": "Lần chạy histogram('parrot') trên máy cá nhân của tôi hôm nay mất chính xác bao nhiêu mili giây? Tôi chưa cung cấp log hoặc phép đo. Cần thời gian thực đo của lần chạy đó, không phải ước lượng.",
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus có mô tả và ví dụ histogram nhưng không có log, thông tin máy hoặc phép đo của phiên chạy cá nhân đang được hỏi. Không thể suy ra số mili giây thực đo từ thuật toán hay ví dụ trong sách."
+  }
+]

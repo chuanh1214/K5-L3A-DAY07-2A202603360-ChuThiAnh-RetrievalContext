@@ -1,0 +1,22 @@
+{
+  "strategy": "hybrid",
+  "candidate_k": 10,
+  "rrf_k": 60,
+  "split": "dev",
+  "n": 15,
+  "hit1": 7,
+  "hit3": 8,
+  "context_hit": 7,
+  "avg_context_chars": 594.2666666666667,
+  "median_ms": 77.07079999818234,
+  "model_load_seconds": 11.027905800001463,
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "dimensions": 384,
+  "collection": "thinkpython2_e8412522c5d43b8e",
+  "day6_strategy": "B",
+  "top_k": 3,
+  "budget_chars": 800,
+  "filter_policy": "none",
+  "service_cost_usd": 0
+}

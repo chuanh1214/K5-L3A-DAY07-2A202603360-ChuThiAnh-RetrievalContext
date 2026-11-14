@@ -1,0 +1,18 @@
+[
+    {
+        "id": "dev_u01",
+        "split": "dev",
+        "question": "Trong phiên Python hiện tại trên máy của tôi, gọi numbers.pop() sẽ trả về giá trị cụ thể nào? Tôi chưa cung cấp nội dung của list numbers. Cần xác định giá trị cụ thể, không chỉ mô tả quy tắc của pop().",
+        "answerable": false,
+        "expected_behavior": "search_and_abstain",
+        "absence_reason": "Corpus là tài liệu Think Python, không chứa trạng thái list numbers trong phiên chạy riêng của người hỏi. Quy tắc pop() không đủ để xác định giá trị cụ thể."
+    },
+    {
+        "id": "dev_u02",
+        "split": "dev",
+        "question": "Trong phiên Python hiện tại trên máy của tôi, biểu thức profile['name'] sẽ trả về chuỗi cụ thể nào? Tôi chưa cung cấp nội dung dictionary profile. Cần xác định chuỗi cụ thể.",
+        "answerable": false,
+        "expected_behavior": "search_and_abstain",
+        "absence_reason": "Corpus không cung cấp trạng thái dictionary profile trong phiên chạy riêng của người hỏi. Ví dụ dictionary trong sách không phải dữ liệu của phiên chạy đó."
+    }
+]

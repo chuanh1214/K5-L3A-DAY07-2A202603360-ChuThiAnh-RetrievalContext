@@ -1,0 +1,1547 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "question": "Chỉ số âm trong chuỗi đếm từ phía nào?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "Or you can use negative indices, which count backward from the end of the string."
+      }
+    ],
+    "results": [
+      {
+        "id": "1c73630b366be2c2fef581caab82311e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1143,
+          "language": "en",
+          "start_char": 1089,
+          "chapter_title": "Lists"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.6460795824432917
+        },
+        "hit": false
+      },
+      {
+        "id": "0ecb778c46f63ab2475f358e19cbd797",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 141,
+        "text": "[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 898,
+          "language": "en",
+          "start_char": 821,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2
+        },
+        "retriever_scores": {
+          "dense": 0.6299079656600952
+        },
+        "hit": false
+      },
+      {
+        "id": "de6d2705a0e0c5f5d601e5dc9df99f0c",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 116,
+        "text": "['a','b','c']\n>>> del t[1]\n>>> t\n['a','c']",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 768,
+          "language": "en",
+          "start_char": 726,
+          "chapter_title": "Lists"
+        },
+        "score": 0.015873015873015872,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3
+        },
+        "retriever_scores": {
+          "dense": 0.6167343854904175
+        },
+        "hit": false
+      }
+    ],
+    "context": "[1c73630b366be2c2fef581caab82311e | starter\\data\\raw\\thinkpython2.pdf | page 111]\n123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)\n\n[0ecb778c46f63ab2475f358e19cbd797 | starter\\data\\raw\\thinkpython2.pdf | page 141]\n[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)\n\n[de6d2705a0e0c5f5d601e5dc9df99f0c | starter\\data\\raw\\thinkpython2.pdf | page 116]\n['a','b','c']\n>>> del t[1]\n>>> t\n['a','c']",
+    "context_ids": [
+      "1c73630b366be2c2fef581caab82311e",
+      "0ecb778c46f63ab2475f358e19cbd797",
+      "de6d2705a0e0c5f5d601e5dc9df99f0c"
+    ],
+    "context_chars": 423,
+    "elapsed_ms": 301.16629999974975,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "question": "Điều gì xảy ra khi dùng số thực làm chỉ số để truy cập một ký tự trong chuỗi?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "But the value of the index has to be an integer. Otherwise you get:\n>>> letter = fruit[1.5]\nTypeError: string indices must be integers"
+      }
+    ],
+    "results": [
+      {
+        "id": "a6c4905b8673f986ae2579cbb7eea8d9",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "takes a value (of any kind) and returns an integer. Dictionaries",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1431,
+          "language": "en",
+          "start_char": 1367,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.55834370156006
+        },
+        "hit": false
+      },
+      {
+        "id": "1c73630b366be2c2fef581caab82311e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1143,
+          "language": "en",
+          "start_char": 1089,
+          "chapter_title": "Lists"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5491015256522306
+        },
+        "hit": false
+      },
+      {
+        "id": "0ecb778c46f63ab2475f358e19cbd797",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 141,
+        "text": "[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 898,
+          "language": "en",
+          "start_char": 821,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.015873015873015872,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3
+        },
+        "retriever_scores": {
+          "dense": 0.5256657600402832
+        },
+        "hit": false
+      }
+    ],
+    "context": "[a6c4905b8673f986ae2579cbb7eea8d9 | starter\\data\\raw\\thinkpython2.pdf | page 130]\ntakes a value (of any kind) and returns an integer. Dictionaries\n\n[1c73630b366be2c2fef581caab82311e | starter\\data\\raw\\thinkpython2.pdf | page 111]\n123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)\n\n[0ecb778c46f63ab2475f358e19cbd797 | starter\\data\\raw\\thinkpython2.pdf | page 141]\n[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+    "context_ids": [
+      "a6c4905b8673f986ae2579cbb7eea8d9",
+      "1c73630b366be2c2fef581caab82311e",
+      "0ecb778c46f63ab2475f358e19cbd797"
+    ],
+    "context_chars": 445,
+    "elapsed_ms": 107.42959999697632,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "question": "Vì sao không thể thay một ký tự của chuỗi bằng cách gán vào vị trí của ký tự đó?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 96,
+        "evidence": "The reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:"
+      }
+    ],
+    "results": [
+      {
+        "id": "4875fc67f0e705fb95180f1679231936",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "The reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:\n>>> greeting ='Hello, world!'\n>>> new_greeting ='J'+ greeting[1:]\n>>> new_greeting\n'Jello, world!'\nThis example concatenates a new first letter onto a slice ofgreeting. It has no effect on the\noriginal string.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 1264,
+          "language": "en",
+          "start_char": 871,
+          "chapter_title": "Strings"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.5393971157792669
+        },
+        "hit": true
+      },
+      {
+        "id": "bd620c868ac6413329a2b59e444d5c2b",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "A slice operator on the left side of an assignment can update multiple elements:\n>>> t = ['a','b','c','d','e','f']\n>>> t[1:3] = ['x','y']\n>>> t\n['a','x','y','d','e','f']",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 614,
+          "language": "en",
+          "start_char": 445,
+          "chapter_title": "Lists"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5375411786114477
+        },
+        "hit": false
+      },
+      {
+        "id": "2bae53eeca782ab89f45628641cf0045",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "8.5 Strings are immutable\nIt is tempting to use the[]operator on the left side of an assignment, with the intention of\nchanging a character in a string. For example:\n>>> greeting ='Hello, world!'\n>>> greeting[0] ='J'\nTypeError:'str'object does not support item assignment\nThe “object” in this case is the string and the “item” is the character you tried to assign.\nFor now, an object is the same thing as a value, but we will refine that definition later\n(Section",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 862,
+          "language": "en",
+          "start_char": 399,
+          "chapter_title": "Strings"
+        },
+        "score": 0.015873015873015872,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3
+        },
+        "retriever_scores": {
+          "dense": 0.5354437668489309
+        },
+        "hit": false
+      }
+    ],
+    "context": "[4875fc67f0e705fb95180f1679231936 | starter\\data\\raw\\thinkpython2.pdf | page 96]\nThe reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:\n>>> greeting ='Hello, world!'\n>>> new_greeting ='J'+ greeting[1:]\n>>> new_greeting\n'Jello, world!'\nThis example concatenates a new first letter onto a slice ofgreeting. It has no effect on the\noriginal string.\n\n[bd620c868ac6413329a2b59e444d5c2b | starter\\data\\raw\\thinkpython2.pdf | page 114]\nA slice operator on the left side of an assignment can update multiple elements:\n>>> t = ['a','b','c','d','e','f']\n>>> t[1:3] = ['x','y']\n>>> t\n['a','x','y','d','e','f']",
+    "context_ids": [
+      "4875fc67f0e705fb95180f1679231936",
+      "bd620c868ac6413329a2b59e444d5c2b"
+    ],
+    "context_chars": 727,
+    "elapsed_ms": 115.62129999947501,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "question": "Trong chương 8, vị trí kết thúc truyền cho phương thức find có được tính vào phạm vi tìm kiếm không?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 98,
+        "evidence": "This search fails becausebdoes not appear in the index range from1to2, not including2.\nSearching up to, but not including, the second index makesfindconsistent with the slice\noperator."
+      }
+    ],
+    "results": [
+      {
+        "id": "63763bc84fb9a51653c13698b7b9537a",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 98,
+        "text": "In this example, we invokefindonwordand pass the letter we are looking for as a param-\neter.\nActually, thefindmethod is more general than our function; it can find substrings, not just\ncharacters:\n>>> word.find('na')\n2\nBy default,findstarts at the beginning of the string, but it can take a second argument, the\nindex where it should start:\n>>> word.find('na', 3)\n4\nThis is an example of anoptional argument;findcan also take a third argument, the index\nwhere it should stop:\n>>>",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 952,
+          "language": "en",
+          "start_char": 473,
+          "chapter_title": "Strings"
+        },
+        "score": 0.03125,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 4,
+          "tfidf": 4
+        },
+        "retriever_scores": {
+          "dense": 0.4997687637805974,
+          "tfidf": 0.1866726353739175
+        },
+        "hit": false
+      },
+      {
+        "id": "42d079cff7f533b32546fd69e9b3a496",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "9.3 Search\nAll of the exercises in the previous section have something in common; they can be solved\nwith the search pattern we saw in Section 8.6. The simplest example is:\ndef has_no_e(word):\nfor letter in word:\nif letter =='e':\nreturn False\nreturn True\nTheforloop traverses the characters inword. If we find the letter “e”, we can immediately\nreturnFalse; otherwise we have to go to the next letter. If we exit the loop normally, that\nmeans we didn’t find an “e”, so we",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 486,
+          "language": "en",
+          "start_char": 15,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.029857397504456328,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 6,
+          "tfidf": 8
+        },
+        "retriever_scores": {
+          "dense": 0.4583275342984485,
+          "tfidf": 0.1601314463816998
+        },
+        "hit": false
+      },
+      {
+        "id": "20514956c53e7e2324eed17fc381b325",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "8.6 Searching\nWhat does the following function do?\ndef find(word, letter):\nindex = 0\nwhile index < len(word):\nif word[index] == letter:\nreturn index\nindex = index + 1\nreturn -1",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 1441,
+          "language": "en",
+          "start_char": 1265,
+          "chapter_title": "Strings"
+        },
+        "score": 0.029211087420042643,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 10,
+          "tfidf": 7
+        },
+        "retriever_scores": {
+          "dense": 0.4128784291220655,
+          "tfidf": 0.16324280514797662
+        },
+        "hit": false
+      }
+    ],
+    "context": "[63763bc84fb9a51653c13698b7b9537a | starter\\data\\raw\\thinkpython2.pdf | page 98]\nIn this example, we invokefindonwordand pass the letter we are looking for as a param-\neter.\nActually, thefindmethod is more general than our function; it can find substrings, not just\ncharacters:\n>>> word.find('na')\n2\nBy default,findstarts at the beginning of the string, but it can take a second argument, the\nindex where it should start:\n>>> word.find('na', 3)\n4\nThis is an example of anoptional argument;findcan also take a third argument, the index\nwhere it should stop:\n>>>",
+    "context_ids": [
+      "63763bc84fb9a51653c13698b7b9537a"
+    ],
+    "context_chars": 560,
+    "elapsed_ms": 77.07079999818234,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "question": "Sách đề xuất cách nào để giảm khác biệt hoa/thường trước khi so sánh các chuỗi?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 99,
+        "evidence": "A common way to address this problem is to convert strings to a standard format, such as\nall lowercase, before performing the comparison."
+      }
+    ],
+    "results": [
+      {
+        "id": "b1ab56c6426c8ed5ec9282c015f74d93",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 94,
+        "text": "you have to subtract 1 fromlength:\n>>> last = fruit[length-1]\n>>> last\n'a'\nOr you can use negative indices, which count backward from the end of the string. The\nexpressionfruit[-1]yields the last letter,fruit[-2]yields the second to last, and so on.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 881,
+          "language": "en",
+          "start_char": 632,
+          "chapter_title": "Strings"
+        },
+        "score": 0.03057889822595705,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 8
+        },
+        "retriever_scores": {
+          "dense": 0.3940444706095598,
+          "tfidf": 0.10103590873893097
+        },
+        "hit": false
+      },
+      {
+        "id": "b6dc1e78a5284cb1591526ce264b7414",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 138,
+        "text": "the first element from each sequence. If they are equal, it goes on to the next elements, and\nso on, until it finds elements that differ. Subsequent elements are not considered (even if\nthey are really big).\n>>> (0, 1, 2) < (0, 3, 4)\nTrue\n>>> (0, 1, 2000000) < (0, 3, 4)\nTrue",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 1207,
+          "language": "en",
+          "start_char": 932,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.02857142857142857,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 10,
+          "tfidf": 10
+        },
+        "retriever_scores": {
+          "dense": 0.35496021181582205,
+          "tfidf": 0.09826161843954229
+        },
+        "hit": false
+      },
+      {
+        "id": "02d078b9dbe164267180576b3b8b97e7",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 97,
+        "text": "As an exercise, encapsulate this code in a function namedcount, and generalize it so that\nit accepts the string and the letter as arguments.\nThen rewrite the function so that instead of traversing the string, it uses the three-\nparameter version offindfrom the previous section.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 1464,
+          "language": "en",
+          "start_char": 1186,
+          "chapter_title": "Strings"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "tfidf": 0.22863848602384934
+        },
+        "hit": false
+      }
+    ],
+    "context": "[b1ab56c6426c8ed5ec9282c015f74d93 | starter\\data\\raw\\thinkpython2.pdf | page 94]\nyou have to subtract 1 fromlength:\n>>> last = fruit[length-1]\n>>> last\n'a'\nOr you can use negative indices, which count backward from the end of the string. The\nexpressionfruit[-1]yields the last letter,fruit[-2]yields the second to last, and so on.\n\n[b6dc1e78a5284cb1591526ce264b7414 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nthe first element from each sequence. If they are equal, it goes on to the next elements, and\nso on, until it finds elements that differ. Subsequent elements are not considered (even if\nthey are really big).\n>>> (0, 1, 2) < (0, 3, 4)\nTrue\n>>> (0, 1, 2000000) < (0, 3, 4)\nTrue",
+    "context_ids": [
+      "b1ab56c6426c8ed5ec9282c015f74d93",
+      "b6dc1e78a5284cb1591526ce264b7414"
+    ],
+    "context_chars": 689,
+    "elapsed_ms": 61.066899997967994,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "question": "Phương thức nào của file object đọc các ký tự đến ký tự xuống dòng và trả về một chuỗi?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 105,
+        "evidence": "The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:"
+      }
+    ],
+    "results": [
+      {
+        "id": "913eb0b827a2af56f2a765320ab9c2b7",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 105,
+        "text": "finis a common name for a file object used for input. The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:\n>>> fin.readline()\n'aa\\n'\nThe first word in this particular list is “aa”, which is a kind of lava. The sequence\\n\nrepresents the newline character that separates this word from the next.",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1692,
+          "language": "en",
+          "start_char": 1279,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.032266458495966696,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.6877266988428484,
+          "tfidf": 0.37433391121887394
+        },
+        "hit": true
+      },
+      {
+        "id": "a41f3bb6b7c607d9a52edf9d4a404ab4",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 105,
+        "text": "The file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1827,
+          "language": "en",
+          "start_char": 1693,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.03225806451612903,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.6706154546325118,
+          "tfidf": 0.4482484731736095
+        },
+        "hit": false
+      },
+      {
+        "id": "8920d2aae123a058638216dffb4d2b8f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 118,
+        "text": "object.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 988,
+          "language": "en",
+          "start_char": 981,
+          "chapter_title": "Lists"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "tfidf": 0.6469111547820621
+        },
+        "hit": false
+      }
+    ],
+    "context": "[913eb0b827a2af56f2a765320ab9c2b7 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nfinis a common name for a file object used for input. The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:\n>>> fin.readline()\n'aa\\n'\nThe first word in this particular list is “aa”, which is a kind of lava. The sequence\\n\nrepresents the newline character that separates this word from the next.\n\n[a41f3bb6b7c607d9a52edf9d4a404ab4 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nThe file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+    "context_ids": [
+      "913eb0b827a2af56f2a765320ab9c2b7",
+      "a41f3bb6b7c607d9a52edf9d4a404ab4"
+    ],
+    "context_chars": 713,
+    "elapsed_ms": 65.38630000068224,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "question": "Trong ví dụ đọc danh sách từ, sách dùng phương thức nào để bỏ ký tự xuống dòng khỏi dòng vừa đọc?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 106,
+        "evidence": "Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()"
+      }
+    ],
+    "results": [
+      {
+        "id": "0d2e210930428930c52375dd962f1186",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 106,
+        "text": "84 Chapter 9. Case study: word play\nThe next word is “aah”, which is a perfectly legitimate word, so stop looking at me like\nthat. Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()\n>>> word\n'aahed'\nYou can also use a file object as part of aforloop. This program readswords.txtand\nprints each word, one per line:\nfin =",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 424,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.5492656885702277
+        },
+        "hit": true
+      },
+      {
+        "id": "bf0a7d582af09eab1dc0748fe709f887",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 145,
+        "text": "1. Write a program that reads a word list from a file (see Section 9.1) and prints all the sets of\nwords that are anagrams.\nHere is an example of what the output might look like:\n['deltas','desalt','lasted','salted','slated','staled']\n['retainers','ternaries']\n['generating','greatening']\n['resmelts','smelters','termless']\nHint: you might want",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1365,
+          "language": "en",
+          "start_char": 1021,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5223979069231702
+        },
+        "hit": false
+      },
+      {
+        "id": "e512c4870fda5ad2d54be15774653815",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 146,
+        "text": "Write a program to find all words that can be reduced in this way, and then find the longest one.\nThis exercise is a little more challenging than most, so here are some suggestions:\n1. You might want to write a function that takes a word and computes a list of all the words that\ncan be formed by removing one letter. These are the “children” of the word.\n2. Recursively, a word is reducible if any of its children are reducible. As a base case, you can\nconsider the empty string reducible.",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 1415,
+          "language": "en",
+          "start_char": 925,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.015873015873015872,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3
+        },
+        "retriever_scores": {
+          "dense": 0.5182860493659973
+        },
+        "hit": false
+      }
+    ],
+    "context": "[0d2e210930428930c52375dd962f1186 | starter\\data\\raw\\thinkpython2.pdf | page 106]\n84 Chapter 9. Case study: word play\nThe next word is “aah”, which is a perfectly legitimate word, so stop looking at me like\nthat. Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()\n>>> word\n'aahed'\nYou can also use a file object as part of aforloop. This program readswords.txtand\nprints each word, one per line:\nfin =",
+    "context_ids": [
+      "0d2e210930428930c52375dd962f1186"
+    ],
+    "context_chars": 506,
+    "elapsed_ms": 72.08600000012666,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "question": "Hàm uses_all trả về True khi từ đầu vào đáp ứng điều kiện nào đối với các ký tự required?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 106,
+        "evidence": "Exercise 9.5.Write a function nameduses_allthat takes a word and a string of required letters,\nand that returnsTrueif the word uses all the required letters at least once."
+      },
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 107,
+        "evidence": "Instead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)"
+      }
+    ],
+    "results": [
+      {
+        "id": "d5286a35b8295c70831a21d22ef13cd6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "return False\nreturn True\nInstead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1842,
+          "language": "en",
+          "start_char": 1424,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.03278688524590164,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "dense": 0.5959836726208165,
+          "tfidf": 0.4378119975290031
+        },
+        "hit": true
+      },
+      {
+        "id": "50d3699021a4cdd41f6e335447b0f1b6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "uses_onlyis similar except that the sense of the condition is reversed:\ndef uses_only(word, available):\nfor letter in word:\nif letter not in available:\nreturn False\nreturn True\nInstead of a list of forbidden letters, we have a list of available letters. If we find a letter in\nwordthat is not inavailable, we can returnFalse.\nuses_allis similar except that we reverse the role of the word and the string of letters:\ndef uses_all(word, required):\nfor letter in required:\nif letter not in",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1417,
+          "language": "en",
+          "start_char": 931,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.03225806451612903,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5654107332229614,
+          "tfidf": 0.24333029270285578
+        },
+        "hit": false
+      },
+      {
+        "id": "7c7206f7ee338d024c2d43b963b7fd2f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 123,
+        "text": "2])\nTrue\n>>> is_sorted(['b','a'])\nFalse",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 438,
+          "language": "en",
+          "start_char": 399,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03125763125763126,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 5
+        },
+        "retriever_scores": {
+          "dense": 0.5026320515494325,
+          "tfidf": 0.1777942604425755
+        },
+        "hit": false
+      }
+    ],
+    "context": "[d5286a35b8295c70831a21d22ef13cd6 | starter\\data\\raw\\thinkpython2.pdf | page 107]\nreturn False\nreturn True\nInstead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)\n\n[7c7206f7ee338d024c2d43b963b7fd2f | starter\\data\\raw\\thinkpython2.pdf | page 123]\n2])\nTrue\n>>> is_sorted(['b','a'])\nFalse",
+    "context_ids": [
+      "d5286a35b8295c70831a21d22ef13cd6",
+      "7c7206f7ee338d024c2d43b963b7fd2f"
+    ],
+    "context_chars": 623,
+    "elapsed_ms": 108.71270000279765,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "question": "List khác string như thế nào về khả năng thay đổi phần tử?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 112,
+        "evidence": "Unlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned."
+      }
+    ],
+    "results": [
+      {
+        "id": "3069208bc669bc4ccf54892405b8e5bb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 628,
+          "language": "en",
+          "start_char": 203,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03149801587301587,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 4
+        },
+        "retriever_scores": {
+          "dense": 0.6023729623071244,
+          "tfidf": 0.28934044628337474
+        },
+        "hit": false
+      },
+      {
+        "id": "f653035434ceae1b80e384fe6b4a7b99",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "of a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1088,
+          "language": "en",
+          "start_char": 677,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03057889822595705,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 8,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.5736229419708252,
+          "tfidf": 0.37488092350141033
+        },
+        "hit": false
+      },
+      {
+        "id": "05b1cdbc27fb8047e6be90f83d672700",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "second is a list of three strings. The elements",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 676,
+          "language": "en",
+          "start_char": 629,
+          "chapter_title": "Lists"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.6785954236984253
+        },
+        "hit": false
+      }
+    ],
+    "context": "[3069208bc669bc4ccf54892405b8e5bb | starter\\data\\raw\\thinkpython2.pdf | page 111]\n10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The\n\n[05b1cdbc27fb8047e6be90f83d672700 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nsecond is a list of three strings. The elements",
+    "context_ids": [
+      "3069208bc669bc4ccf54892405b8e5bb",
+      "05b1cdbc27fb8047e6be90f83d672700"
+    ],
+    "context_chars": 638,
+    "elapsed_ms": 80.74070000293432,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "question": "Trong chương 10, vì sao phép gán t = t.sort() gây kết quả không mong muốn?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 114,
+        "evidence": "Most list methods are void; they modify the list and returnNone. If you accidentally write\nt = t.sort(), you will be disappointed with the result."
+      },
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 121,
+        "evidence": "t = t.sort() # WRONG!\nBecausesortreturnsNone, the next operation you perform withtis likely to fail."
+      }
+    ],
+    "results": [
+      {
+        "id": "e837a534a33c9d9c42c4f293bf000344",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "['a','b','c','d','e']\nMost list methods are void; they modify the list and returnNone. If you accidentally write\nt = t.sort(), you will be disappointed with the result.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 1265,
+          "language": "en",
+          "start_char": 1097,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03149801587301587,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 4,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.5566561984019341,
+          "tfidf": 0.3119084595127797
+        },
+        "hit": true
+      },
+      {
+        "id": "821667ea2b810277e5a13f9c5e1b490e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "t1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1096,
+          "language": "en",
+          "start_char": 916,
+          "chapter_title": "Lists"
+        },
+        "score": 0.030621785881252923,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 9,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.4996923804283142,
+          "tfidf": 0.31248283780664854
+        },
+        "hit": false
+      },
+      {
+        "id": "4ca5eefcf886891e1c9937552e810a06",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "10.10).",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 870,
+          "language": "en",
+          "start_char": 863,
+          "chapter_title": "Strings"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "tfidf": 0.39004505464576744
+        },
+        "hit": false
+      }
+    ],
+    "context": "[e837a534a33c9d9c42c4f293bf000344 | starter\\data\\raw\\thinkpython2.pdf | page 114]\n['a','b','c','d','e']\nMost list methods are void; they modify the list and returnNone. If you accidentally write\nt = t.sort(), you will be disappointed with the result.\n\n[821667ea2b810277e5a13f9c5e1b490e | starter\\data\\raw\\thinkpython2.pdf | page 114]\nt1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t\n\n[4ca5eefcf886891e1c9937552e810a06 | starter\\data\\raw\\thinkpython2.pdf | page 96]\n10.10).",
+    "context_ids": [
+      "e837a534a33c9d9c42c4f293bf000344",
+      "821667ea2b810277e5a13f9c5e1b490e",
+      "4ca5eefcf886891e1c9937552e810a06"
+    ],
+    "context_chars": 604,
+    "elapsed_ms": 75.4704999999376,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "question": "Phương thức pop() của list làm gì khi không truyền chỉ số?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 116,
+        "evidence": "popmodifies the list and returns the element that was removed. If you don’t provide an\nindex, it deletes and returns the last element."
+      }
+    ],
+    "results": [
+      {
+        "id": "f653035434ceae1b80e384fe6b4a7b99",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "of a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1088,
+          "language": "en",
+          "start_char": 677,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03200204813108039,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5156289492734956,
+          "tfidf": 0.1671667033989327
+        },
+        "hit": false
+      },
+      {
+        "id": "358ace752b82138a0af81e54d86037d6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 116,
+        "text": "10.8 Deleting elements\nThere are several ways to delete elements from a list. If you know the index of the element\nyou want, you can usepop:\n>>> t = ['a','b','c']\n>>> x = t.pop(1)\n>>> t\n['a','c']\n>>> x\n'b'\npopmodifies the list and returns the element that was removed. If you don’t provide an\nindex, it deletes and returns the last element.\nIf you don’t need the removed value, you can use thedeloperator:\n>>> t =",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 725,
+          "language": "en",
+          "start_char": 312,
+          "chapter_title": "Lists"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "tfidf": 0.18267024062471932
+        },
+        "hit": true
+      },
+      {
+        "id": "9d84fa5418149d6955687fe552a97c59",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 113,
+        "text": "This loop traverses the list and updates each element.lenreturns the number of elements\nin the list.rangereturns a list of indices from 0 ton−1, wherenis the length of the list.\nEach time through the loopigets the index of the next element. The assignment statement\nin the body usesito read the old value of the element and to assign the new value.\nAforloop over an empty list never runs the body:\nfor x in []:\nprint('This never happens.')",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 907,
+          "language": "en",
+          "start_char": 468,
+          "chapter_title": "Lists"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1
+        },
+        "retriever_scores": {
+          "dense": 0.5314177749828497
+        },
+        "hit": false
+      }
+    ],
+    "context": "[f653035434ceae1b80e384fe6b4a7b99 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nof a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+    "context_ids": [
+      "f653035434ceae1b80e384fe6b4a7b99"
+    ],
+    "context_chars": 493,
+    "elapsed_ms": 80.53490000020247,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "question": "Muốn ghép một list các chuỗi thành một chuỗi bằng delimiter, dùng phương thức nào và gọi trên đối tượng nào?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 117,
+        "evidence": ">>> s = delimiter.join(t)\n>>> s\n'pining for the fjords'\nIn this case the delimiter is a space character, sojoinputs a space between words. To\nconcatenate strings without spaces, you can use the empty string,'', as a delimiter."
+      }
+    ],
+    "results": [
+      {
+        "id": "060dff8e3159ea9152799639bb68c2eb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 117,
+        "text": "on the delimiter and pass the list as a parameter:\n>>> t = ['pining','for','the','fjords']\n>>> delimiter =' '",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 955,
+          "language": "en",
+          "start_char": 846,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03278688524590164,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "dense": 0.6462270406619942,
+          "tfidf": 0.6453713201416065
+        },
+        "hit": false
+      },
+      {
+        "id": "f653035434ceae1b80e384fe6b4a7b99",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "of a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1088,
+          "language": "en",
+          "start_char": 677,
+          "chapter_title": "Lists"
+        },
+        "score": 0.030536130536130537,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 6,
+          "tfidf": 5
+        },
+        "retriever_scores": {
+          "dense": 0.5850404849672617,
+          "tfidf": 0.19253136536236654
+        },
+        "hit": false
+      },
+      {
+        "id": "3069208bc669bc4ccf54892405b8e5bb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 628,
+          "language": "en",
+          "start_char": 203,
+          "chapter_title": "Lists"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2
+        },
+        "retriever_scores": {
+          "dense": 0.630007680953236
+        },
+        "hit": false
+      }
+    ],
+    "context": "[060dff8e3159ea9152799639bb68c2eb | starter\\data\\raw\\thinkpython2.pdf | page 117]\non the delimiter and pass the list as a parameter:\n>>> t = ['pining','for','the','fjords']\n>>> delimiter =' '\n\n[f653035434ceae1b80e384fe6b4a7b99 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nof a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+    "context_ids": [
+      "060dff8e3159ea9152799639bb68c2eb",
+      "f653035434ceae1b80e384fe6b4a7b99"
+    ],
+    "context_chars": 686,
+    "elapsed_ms": 65.04339999810327,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "question": "Hai list chứa cùng các phần tử có nhất thiết phải là cùng một object không?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 118,
+        "evidence": "If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers."
+      }
+    ],
+    "results": [
+      {
+        "id": "d47d0792b790af695fbd82c66b898760",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 118,
+        "text": "ements, but notidentical, because they are not the same object. If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers. If another list has the same elements, we say it has the\nsame value, but it is not the same",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 980,
+          "language": "en",
+          "start_char": 492,
+          "chapter_title": "Lists"
+        },
+        "score": 0.032266458495966696,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.7881215214729309,
+          "tfidf": 0.3133576639361497
+        },
+        "hit": true
+      },
+      {
+        "id": "f7948d3f5018303dcd6369324d75fba1",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 118,
+        "text": "10.11 Aliasing\nIfarefers to an object and you assignb = a, then both variables refer to the same object:\n>>> a = [1, 2, 3]\n>>> b = a\n>>> b is a\nTrue\nThe state diagram looks like Figure 10.4.\nThe association of a variable with an object is called areference. In this example, there are\ntwo references to the same object.\nAn object with more than one reference has more than one name, so we say that the object\nisaliased.\nIf the aliased object is mutable, changes made with one alias affect the other:",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 1488,
+          "language": "en",
+          "start_char": 989,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03128054740957967,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 6,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5761115207605658,
+          "tfidf": 0.48029588133161494
+        },
+        "hit": false
+      },
+      {
+        "id": "f653035434ceae1b80e384fe6b4a7b99",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "of a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1088,
+          "language": "en",
+          "start_char": 677,
+          "chapter_title": "Lists"
+        },
+        "score": 0.029850746268656716,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 7,
+          "tfidf": 7
+        },
+        "retriever_scores": {
+          "dense": 0.5650151968002319,
+          "tfidf": 0.2540513852206924
+        },
+        "hit": false
+      }
+    ],
+    "context": "[d47d0792b790af695fbd82c66b898760 | starter\\data\\raw\\thinkpython2.pdf | page 118]\nements, but notidentical, because they are not the same object. If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers. If another list has the same elements, we say it has the\nsame value, but it is not the same",
+    "context_ids": [
+      "d47d0792b790af695fbd82c66b898760"
+    ],
+    "context_chars": 570,
+    "elapsed_ms": 59.66450000050827,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "question": "dict.get(key, default) trả về gì khi key không tồn tại trong dictionary?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 127,
+        "evidence": "Dictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value."
+      }
+    ],
+    "results": [
+      {
+        "id": "d3f1db77682411be501d0bff70424c22",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 127,
+        "text": "The histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 2139,
+          "language": "en",
+          "start_char": 1794,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.03252247488101534,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.6173548058290609,
+          "tfidf": 0.3542911780416324
+        },
+        "hit": true
+      },
+      {
+        "id": "cc053a99e662f933628d3998da6ac7e0",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "This line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 1485,
+          "language": "en",
+          "start_char": 1184,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.03057889822595705,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 8
+        },
+        "retriever_scores": {
+          "dense": 0.5762383766103297,
+          "tfidf": 0.25726673073579054
+        },
+        "hit": false
+      },
+      {
+        "id": "2fc9b6316c43f46db6219081e8a92fba",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 142,
+        "text": "dict(zip('abc', range(3)))\n>>> d\n{'a': 0,'c': 2,'b': 1}\nThe dictionary methodupdatealso takes a list of tuples and adds them, as key-value pairs,\nto an existing dictionary.",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 955,
+          "language": "en",
+          "start_char": 783,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.029857397504456328,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 8,
+          "tfidf": 6
+        },
+        "retriever_scores": {
+          "dense": 0.55385271035747,
+          "tfidf": 0.28294595361646646
+        },
+        "hit": false
+      }
+    ],
+    "context": "[d3f1db77682411be501d0bff70424c22 | starter\\data\\raw\\thinkpython2.pdf | page 127]\nThe histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)\n\n[2fc9b6316c43f46db6219081e8a92fba | starter\\data\\raw\\thinkpython2.pdf | page 142]\ndict(zip('abc', range(3)))\n>>> d\n{'a': 0,'c': 2,'b': 1}\nThe dictionary methodupdatealso takes a list of tuples and adds them, as key-value pairs,\nto an existing dictionary.",
+    "context_ids": [
+      "d3f1db77682411be501d0bff70424c22",
+      "2fc9b6316c43f46db6219081e8a92fba"
+    ],
+    "context_chars": 683,
+    "elapsed_ms": 94.65819999968517,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "question": "Vì sao list không thể được dùng làm key của dictionary?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 130,
+        "evidence": "That’s why keys have to be hashable, and why mutable types like lists aren’t."
+      }
+    ],
+    "results": [
+      {
+        "id": "081a223f5d77fb5bb15ea38a7845b7a6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "11.1 A dictionary is a mapping\nAdictionaryis like a list, but more general. In a list, the indices have to be integers; in a\ndictionary they can be (almost) any type.\nA dictionary contains a collection of indices, which are calledkeys, and a collection of\nvalues. Each key is associated with a single value. The association of a key and a value is\ncalled akey-value pairor sometimes anitem.\nIn mathematical language, a dictionary represents amappingfrom keys to values, so",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 682,
+          "language": "en",
+          "start_char": 210,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.032018442622950824,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 4
+        },
+        "retriever_scores": {
+          "dense": 0.7679929685582259,
+          "tfidf": 0.3459792325971716
+        },
+        "hit": false
+      },
+      {
+        "id": "2fc9b6316c43f46db6219081e8a92fba",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 142,
+        "text": "dict(zip('abc', range(3)))\n>>> d\n{'a': 0,'c': 2,'b': 1}\nThe dictionary methodupdatealso takes a list of tuples and adds them, as key-value pairs,\nto an existing dictionary.",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 955,
+          "language": "en",
+          "start_char": 783,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.030158730158730156,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 10,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.6339127958857097,
+          "tfidf": 0.3512606210255336
+        },
+        "hit": false
+      },
+      {
+        "id": "cc053a99e662f933628d3998da6ac7e0",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "This line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 1485,
+          "language": "en",
+          "start_char": 1184,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.030090497737556562,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 8,
+          "tfidf": 5
+        },
+        "retriever_scores": {
+          "dense": 0.6540916550837589,
+          "tfidf": 0.33231011123397086
+        },
+        "hit": false
+      }
+    ],
+    "context": "[081a223f5d77fb5bb15ea38a7845b7a6 | starter\\data\\raw\\thinkpython2.pdf | page 125]\n11.1 A dictionary is a mapping\nAdictionaryis like a list, but more general. In a list, the indices have to be integers; in a\ndictionary they can be (almost) any type.\nA dictionary contains a collection of indices, which are calledkeys, and a collection of\nvalues. Each key is associated with a single value. The association of a key and a value is\ncalled akey-value pairor sometimes anitem.\nIn mathematical language, a dictionary represents amappingfrom keys to values, so",
+    "context_ids": [
+      "081a223f5d77fb5bb15ea38a7845b7a6"
+    ],
+    "context_chars": 554,
+    "elapsed_ms": 54.490200000145705,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  }
+]

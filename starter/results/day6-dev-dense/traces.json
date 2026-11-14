@@ -1,0 +1,1228 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "question": "Chỉ số âm trong chuỗi đếm từ phía nào?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "Or you can use negative indices, which count backward from the end of the string."
+      }
+    ],
+    "results": [
+      {
+        "id": "1c73630b366be2c2fef581caab82311e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1143,
+          "language": "en",
+          "start_char": 1089,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6460795824432917,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "0ecb778c46f63ab2475f358e19cbd797",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 141,
+        "text": "[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 898,
+          "language": "en",
+          "start_char": 821,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.6299079656600952,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "de6d2705a0e0c5f5d601e5dc9df99f0c",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 116,
+        "text": "['a','b','c']\n>>> del t[1]\n>>> t\n['a','c']",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 768,
+          "language": "en",
+          "start_char": 726,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6167343854904175,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[1c73630b366be2c2fef581caab82311e | starter\\data\\raw\\thinkpython2.pdf | page 111]\n123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)\n\n[0ecb778c46f63ab2475f358e19cbd797 | starter\\data\\raw\\thinkpython2.pdf | page 141]\n[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)\n\n[de6d2705a0e0c5f5d601e5dc9df99f0c | starter\\data\\raw\\thinkpython2.pdf | page 116]\n['a','b','c']\n>>> del t[1]\n>>> t\n['a','c']",
+    "context_ids": [
+      "1c73630b366be2c2fef581caab82311e",
+      "0ecb778c46f63ab2475f358e19cbd797",
+      "de6d2705a0e0c5f5d601e5dc9df99f0c"
+    ],
+    "context_chars": 423,
+    "elapsed_ms": 1130.6356999994023,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "question": "Điều gì xảy ra khi dùng số thực làm chỉ số để truy cập một ký tự trong chuỗi?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "But the value of the index has to be an integer. Otherwise you get:\n>>> letter = fruit[1.5]\nTypeError: string indices must be integers"
+      }
+    ],
+    "results": [
+      {
+        "id": "a6c4905b8673f986ae2579cbb7eea8d9",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "takes a value (of any kind) and returns an integer. Dictionaries",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1431,
+          "language": "en",
+          "start_char": 1367,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.55834370156006,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "1c73630b366be2c2fef581caab82311e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1143,
+          "language": "en",
+          "start_char": 1089,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5491015256522306,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "0ecb778c46f63ab2475f358e19cbd797",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 141,
+        "text": "[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 898,
+          "language": "en",
+          "start_char": 821,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.5256657600402832,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[a6c4905b8673f986ae2579cbb7eea8d9 | starter\\data\\raw\\thinkpython2.pdf | page 130]\ntakes a value (of any kind) and returns an integer. Dictionaries\n\n[1c73630b366be2c2fef581caab82311e | starter\\data\\raw\\thinkpython2.pdf | page 111]\n123]\n>>> empty = []\n>>> print(cheeses, numbers, empty)\n\n[0ecb778c46f63ab2475f358e19cbd797 | starter\\data\\raw\\thinkpython2.pdf | page 141]\n[('a', 0), ('b', 1), ('c', 2)]\nfor letter, number in t:\nprint(number, letter)",
+    "context_ids": [
+      "a6c4905b8673f986ae2579cbb7eea8d9",
+      "1c73630b366be2c2fef581caab82311e",
+      "0ecb778c46f63ab2475f358e19cbd797"
+    ],
+    "context_chars": 445,
+    "elapsed_ms": 424.87310000069556,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "question": "Vì sao không thể thay một ký tự của chuỗi bằng cách gán vào vị trí của ký tự đó?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 96,
+        "evidence": "The reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:"
+      }
+    ],
+    "results": [
+      {
+        "id": "4875fc67f0e705fb95180f1679231936",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "The reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:\n>>> greeting ='Hello, world!'\n>>> new_greeting ='J'+ greeting[1:]\n>>> new_greeting\n'Jello, world!'\nThis example concatenates a new first letter onto a slice ofgreeting. It has no effect on the\noriginal string.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 1264,
+          "language": "en",
+          "start_char": 871,
+          "chapter_title": "Strings"
+        },
+        "score": 0.5393971157792669,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "bd620c868ac6413329a2b59e444d5c2b",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "A slice operator on the left side of an assignment can update multiple elements:\n>>> t = ['a','b','c','d','e','f']\n>>> t[1:3] = ['x','y']\n>>> t\n['a','x','y','d','e','f']",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 614,
+          "language": "en",
+          "start_char": 445,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5375411786114477,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "2bae53eeca782ab89f45628641cf0045",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "8.5 Strings are immutable\nIt is tempting to use the[]operator on the left side of an assignment, with the intention of\nchanging a character in a string. For example:\n>>> greeting ='Hello, world!'\n>>> greeting[0] ='J'\nTypeError:'str'object does not support item assignment\nThe “object” in this case is the string and the “item” is the character you tried to assign.\nFor now, an object is the same thing as a value, but we will refine that definition later\n(Section",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 862,
+          "language": "en",
+          "start_char": 399,
+          "chapter_title": "Strings"
+        },
+        "score": 0.5354437668489309,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[4875fc67f0e705fb95180f1679231936 | starter\\data\\raw\\thinkpython2.pdf | page 96]\nThe reason for the error is that strings areimmutable, which means you can’t change an\nexisting string. The best you can do is create a new string that is a variation on the original:\n>>> greeting ='Hello, world!'\n>>> new_greeting ='J'+ greeting[1:]\n>>> new_greeting\n'Jello, world!'\nThis example concatenates a new first letter onto a slice ofgreeting. It has no effect on the\noriginal string.\n\n[bd620c868ac6413329a2b59e444d5c2b | starter\\data\\raw\\thinkpython2.pdf | page 114]\nA slice operator on the left side of an assignment can update multiple elements:\n>>> t = ['a','b','c','d','e','f']\n>>> t[1:3] = ['x','y']\n>>> t\n['a','x','y','d','e','f']",
+    "context_ids": [
+      "4875fc67f0e705fb95180f1679231936",
+      "bd620c868ac6413329a2b59e444d5c2b"
+    ],
+    "context_chars": 727,
+    "elapsed_ms": 275.57789999991655,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "question": "Trong chương 8, vị trí kết thúc truyền cho phương thức find có được tính vào phạm vi tìm kiếm không?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 98,
+        "evidence": "This search fails becausebdoes not appear in the index range from1to2, not including2.\nSearching up to, but not including, the second index makesfindconsistent with the slice\noperator."
+      }
+    ],
+    "results": [
+      {
+        "id": "391cf24dff20530b698f1bb9983b332e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 123,
+        "text": "Because the words are in alphabetical order, we can speed things up with a bisection search (also\nknown as binary search), which is similar to what you do when you look a word up in the dictionary\n(the book, not the data structure). You start in the middle and check to see whether the word you are\nlooking for comes before the word in the middle of the list. If so, you search the first half of the list\nthe same way. Otherwise you search the second half.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 2250,
+          "language": "en",
+          "start_char": 1794,
+          "chapter_title": "Lists"
+        },
+        "score": 0.532670076767197,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "934b805780b73bd7b2a2d22f5ea1f4bf",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 123,
+        "text": "Either way, you cut the remaining search space in half. If the word list has 113,809 words, it will\ntake about 17 steps to find the word or conclude that it’s not there.\nWrite a function calledin_bisectthat takes a sorted list and a target value and returnsTrueif\nthe word is in the list andFalseif it’s not.\nOr you could read the documentation of thebisectmodule and use that! Solution:https:\n// thinkpython. com/ code/ inlist. py.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 2683,
+          "language": "en",
+          "start_char": 2251,
+          "chapter_title": "Lists"
+        },
+        "score": 0.522462456079576,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "c5d274876ac06ffc6413efe4af6ec4eb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "9.3. Search 85",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 14,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.5063079293782762,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[391cf24dff20530b698f1bb9983b332e | starter\\data\\raw\\thinkpython2.pdf | page 123]\nBecause the words are in alphabetical order, we can speed things up with a bisection search (also\nknown as binary search), which is similar to what you do when you look a word up in the dictionary\n(the book, not the data structure). You start in the middle and check to see whether the word you are\nlooking for comes before the word in the middle of the list. If so, you search the first half of the list\nthe same way. Otherwise you search the second half.\n\n[c5d274876ac06ffc6413efe4af6ec4eb | starter\\data\\raw\\thinkpython2.pdf | page 107]\n9.3. Search 85",
+    "context_ids": [
+      "391cf24dff20530b698f1bb9983b332e",
+      "c5d274876ac06ffc6413efe4af6ec4eb"
+    ],
+    "context_chars": 636,
+    "elapsed_ms": 272.78730000034557,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "question": "Sách đề xuất cách nào để giảm khác biệt hoa/thường trước khi so sánh các chuỗi?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 99,
+        "evidence": "A common way to address this problem is to convert strings to a standard format, such as\nall lowercase, before performing the comparison."
+      }
+    ],
+    "results": [
+      {
+        "id": "18edaf2d96821ff802e014131e5eaed9",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 138,
+        "text": "work with tuples and other sequences; Python starts by comparing",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 931,
+          "language": "en",
+          "start_char": 867,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.47406478148891895,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "8bba473739edad04d259596e6b95003f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 143,
+        "text": "12.7 Sequences of sequences\nI have focused on lists of tuples, but almost all of the examples in this chapter also work\nwith lists of lists, tuples of tuples, and tuples of lists. To avoid enumerating the possible\ncombinations, it is sometimes easier to talk about sequences of sequences.\nIn many contexts, the different kinds of sequences (strings, lists and tuples) can be used\ninterchangeably. So how should you choose one over the others?",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 777,
+          "language": "en",
+          "start_char": 335,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.4063915135381079,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "b1ab56c6426c8ed5ec9282c015f74d93",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 94,
+        "text": "you have to subtract 1 fromlength:\n>>> last = fruit[length-1]\n>>> last\n'a'\nOr you can use negative indices, which count backward from the end of the string. The\nexpressionfruit[-1]yields the last letter,fruit[-2]yields the second to last, and so on.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 881,
+          "language": "en",
+          "start_char": 632,
+          "chapter_title": "Strings"
+        },
+        "score": 0.3940444706095598,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[8bba473739edad04d259596e6b95003f | starter\\data\\raw\\thinkpython2.pdf | page 143]\n12.7 Sequences of sequences\nI have focused on lists of tuples, but almost all of the examples in this chapter also work\nwith lists of lists, tuples of tuples, and tuples of lists. To avoid enumerating the possible\ncombinations, it is sometimes easier to talk about sequences of sequences.\nIn many contexts, the different kinds of sequences (strings, lists and tuples) can be used\ninterchangeably. So how should you choose one over the others?",
+    "context_ids": [
+      "18edaf2d96821ff802e014131e5eaed9",
+      "8bba473739edad04d259596e6b95003f"
+    ],
+    "context_chars": 672,
+    "elapsed_ms": 777.8945999998541,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "question": "Phương thức nào của file object đọc các ký tự đến ký tự xuống dòng và trả về một chuỗi?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 105,
+        "evidence": "The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:"
+      }
+    ],
+    "results": [
+      {
+        "id": "913eb0b827a2af56f2a765320ab9c2b7",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 105,
+        "text": "finis a common name for a file object used for input. The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:\n>>> fin.readline()\n'aa\\n'\nThe first word in this particular list is “aa”, which is a kind of lava. The sequence\\n\nrepresents the newline character that separates this word from the next.",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1692,
+          "language": "en",
+          "start_char": 1279,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.6877266988428484,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "a41f3bb6b7c607d9a52edf9d4a404ab4",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 105,
+        "text": "The file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1827,
+          "language": "en",
+          "start_char": 1693,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.6706154546325118,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "81ccf3e8fe35b6643957666b728e4f5f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 102,
+        "text": "a string).",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 489,
+          "language": "en",
+          "start_char": 479,
+          "chapter_title": "Strings"
+        },
+        "score": 0.5891738113514791,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[913eb0b827a2af56f2a765320ab9c2b7 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nfinis a common name for a file object used for input. The file object provides several\nmethods for reading, includingreadline, which reads characters from the file until it gets\nto a newline and returns the result as a string:\n>>> fin.readline()\n'aa\\n'\nThe first word in this particular list is “aa”, which is a kind of lava. The sequence\\n\nrepresents the newline character that separates this word from the next.\n\n[a41f3bb6b7c607d9a52edf9d4a404ab4 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nThe file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+    "context_ids": [
+      "913eb0b827a2af56f2a765320ab9c2b7",
+      "a41f3bb6b7c607d9a52edf9d4a404ab4"
+    ],
+    "context_chars": 713,
+    "elapsed_ms": 116.05229999986477,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "question": "Trong ví dụ đọc danh sách từ, sách dùng phương thức nào để bỏ ký tự xuống dòng khỏi dòng vừa đọc?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 106,
+        "evidence": "Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()"
+      }
+    ],
+    "results": [
+      {
+        "id": "0d2e210930428930c52375dd962f1186",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 106,
+        "text": "84 Chapter 9. Case study: word play\nThe next word is “aah”, which is a perfectly legitimate word, so stop looking at me like\nthat. Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()\n>>> word\n'aahed'\nYou can also use a file object as part of aforloop. This program readswords.txtand\nprints each word, one per line:\nfin =",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 424,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.5492656885702277,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "bf0a7d582af09eab1dc0748fe709f887",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 145,
+        "text": "1. Write a program that reads a word list from a file (see Section 9.1) and prints all the sets of\nwords that are anagrams.\nHere is an example of what the output might look like:\n['deltas','desalt','lasted','salted','slated','staled']\n['retainers','ternaries']\n['generating','greatening']\n['resmelts','smelters','termless']\nHint: you might want",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1365,
+          "language": "en",
+          "start_char": 1021,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.5223979069231702,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "e512c4870fda5ad2d54be15774653815",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 146,
+        "text": "Write a program to find all words that can be reduced in this way, and then find the longest one.\nThis exercise is a little more challenging than most, so here are some suggestions:\n1. You might want to write a function that takes a word and computes a list of all the words that\ncan be formed by removing one letter. These are the “children” of the word.\n2. Recursively, a word is reducible if any of its children are reducible. As a base case, you can\nconsider the empty string reducible.",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 1415,
+          "language": "en",
+          "start_char": 925,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.5182860493659973,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[0d2e210930428930c52375dd962f1186 | starter\\data\\raw\\thinkpython2.pdf | page 106]\n84 Chapter 9. Case study: word play\nThe next word is “aah”, which is a perfectly legitimate word, so stop looking at me like\nthat. Or, if it’s the newline character that’s bothering you, we can get rid of it with the\nstring methodstrip:\n>>> line = fin.readline()\n>>> word = line.strip()\n>>> word\n'aahed'\nYou can also use a file object as part of aforloop. This program readswords.txtand\nprints each word, one per line:\nfin =",
+    "context_ids": [
+      "0d2e210930428930c52375dd962f1186"
+    ],
+    "context_chars": 506,
+    "elapsed_ms": 76.63260000117589,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "question": "Hàm uses_all trả về True khi từ đầu vào đáp ứng điều kiện nào đối với các ký tự required?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 106,
+        "evidence": "Exercise 9.5.Write a function nameduses_allthat takes a word and a string of required letters,\nand that returnsTrueif the word uses all the required letters at least once."
+      },
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 107,
+        "evidence": "Instead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)"
+      }
+    ],
+    "results": [
+      {
+        "id": "d5286a35b8295c70831a21d22ef13cd6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "return False\nreturn True\nInstead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1842,
+          "language": "en",
+          "start_char": 1424,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.5959836726208165,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "50d3699021a4cdd41f6e335447b0f1b6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 107,
+        "text": "uses_onlyis similar except that the sense of the condition is reversed:\ndef uses_only(word, available):\nfor letter in word:\nif letter not in available:\nreturn False\nreturn True\nInstead of a list of forbidden letters, we have a list of available letters. If we find a letter in\nwordthat is not inavailable, we can returnFalse.\nuses_allis similar except that we reverse the role of the word and the string of letters:\ndef uses_all(word, required):\nfor letter in required:\nif letter not in",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1417,
+          "language": "en",
+          "start_char": 931,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.5654107332229614,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "7c7206f7ee338d024c2d43b963b7fd2f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 123,
+        "text": "2])\nTrue\n>>> is_sorted(['b','a'])\nFalse",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 438,
+          "language": "en",
+          "start_char": 399,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5026320515494325,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[d5286a35b8295c70831a21d22ef13cd6 | starter\\data\\raw\\thinkpython2.pdf | page 107]\nreturn False\nreturn True\nInstead of traversing the letters inword, the loop traverses the required letters. If any of the\nrequired letters do not appear in the word, we can returnFalse.\nIf you were really thinking like a computer scientist, you would have recognized that\nuses_allwas an instance of a previously solved problem, and you would have written:\ndef uses_all(word, required):\nreturn uses_only(required, word)\n\n[7c7206f7ee338d024c2d43b963b7fd2f | starter\\data\\raw\\thinkpython2.pdf | page 123]\n2])\nTrue\n>>> is_sorted(['b','a'])\nFalse",
+    "context_ids": [
+      "d5286a35b8295c70831a21d22ef13cd6",
+      "7c7206f7ee338d024c2d43b963b7fd2f"
+    ],
+    "context_chars": 623,
+    "elapsed_ms": 76.36249999995925,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "question": "List khác string như thế nào về khả năng thay đổi phần tử?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 112,
+        "evidence": "Unlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned."
+      }
+    ],
+    "results": [
+      {
+        "id": "05b1cdbc27fb8047e6be90f83d672700",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "second is a list of three strings. The elements",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 676,
+          "language": "en",
+          "start_char": 629,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6785954236984253,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "bff571429fa1b7f66b52d2374846e72c",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 143,
+        "text": "To start with the obvious, strings are more limited than other sequences because the ele-\nments have to be characters. They are also immutable. If you need the ability to change the\ncharacters in a string (as opposed to creating a new string), you might want to use a list of\ncharacters instead.\nLists are more common than tuples, mostly because they are mutable. But there are a few\ncases where you might prefer tuples:",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 1198,
+          "language": "en",
+          "start_char": 778,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.6139024679035686,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "3069208bc669bc4ccf54892405b8e5bb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 628,
+          "language": "en",
+          "start_char": 203,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6023729623071244,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[05b1cdbc27fb8047e6be90f83d672700 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nsecond is a list of three strings. The elements\n\n[bff571429fa1b7f66b52d2374846e72c | starter\\data\\raw\\thinkpython2.pdf | page 143]\nTo start with the obvious, strings are more limited than other sequences because the ele-\nments have to be characters. They are also immutable. If you need the ability to change the\ncharacters in a string (as opposed to creating a new string), you might want to use a list of\ncharacters instead.\nLists are more common than tuples, mostly because they are mutable. But there are a few\ncases where you might prefer tuples:",
+    "context_ids": [
+      "05b1cdbc27fb8047e6be90f83d672700",
+      "bff571429fa1b7f66b52d2374846e72c"
+    ],
+    "context_chars": 633,
+    "elapsed_ms": 78.30539999849861,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "question": "Trong chương 10, vì sao phép gán t = t.sort() gây kết quả không mong muốn?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 114,
+        "evidence": "Most list methods are void; they modify the list and returnNone. If you accidentally write\nt = t.sort(), you will be disappointed with the result."
+      },
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 121,
+        "evidence": "t = t.sort() # WRONG!\nBecausesortreturnsNone, the next operation you perform withtis likely to fail."
+      }
+    ],
+    "results": [
+      {
+        "id": "4faab833236aa771c4587517087b00c9",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 140,
+        "text": "118 Chapter 12. T uples",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 23,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.5991758108139038,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "e4a39f8c9e882a251b481df92f40fc03",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 144,
+        "text": "122 Chapter 12. T uples",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 23,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.58992600440979,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "c89ddadb4b445c35ba93a03f48a54b67",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 142,
+        "text": "120 Chapter 12. T uples",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 23,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.5826382637023926,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[4faab833236aa771c4587517087b00c9 | starter\\data\\raw\\thinkpython2.pdf | page 140]\n118 Chapter 12. T uples\n\n[e4a39f8c9e882a251b481df92f40fc03 | starter\\data\\raw\\thinkpython2.pdf | page 144]\n122 Chapter 12. T uples\n\n[c89ddadb4b445c35ba93a03f48a54b67 | starter\\data\\raw\\thinkpython2.pdf | page 142]\n120 Chapter 12. T uples",
+    "context_ids": [
+      "4faab833236aa771c4587517087b00c9",
+      "e4a39f8c9e882a251b481df92f40fc03",
+      "c89ddadb4b445c35ba93a03f48a54b67"
+    ],
+    "context_chars": 319,
+    "elapsed_ms": 74.3743999992148,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "question": "Phương thức pop() của list làm gì khi không truyền chỉ số?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 116,
+        "evidence": "popmodifies the list and returns the element that was removed. If you don’t provide an\nindex, it deletes and returns the last element."
+      }
+    ],
+    "results": [
+      {
+        "id": "9d84fa5418149d6955687fe552a97c59",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 113,
+        "text": "This loop traverses the list and updates each element.lenreturns the number of elements\nin the list.rangereturns a list of indices from 0 ton−1, wherenis the length of the list.\nEach time through the loopigets the index of the next element. The assignment statement\nin the body usesito read the old value of the element and to assign the new value.\nAforloop over an empty list never runs the body:\nfor x in []:\nprint('This never happens.')",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 907,
+          "language": "en",
+          "start_char": 468,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5314177749828497,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "821667ea2b810277e5a13f9c5e1b490e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "t1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1096,
+          "language": "en",
+          "start_char": 916,
+          "chapter_title": "Lists"
+        },
+        "score": 0.52871085788938,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "f653035434ceae1b80e384fe6b4a7b99",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "of a list don’t have to be the same type. The following list contains a string, a float, an\ninteger, and (lo!) another list:\n['spam', 2.0, 5, [10, 20]]\nA list within another list isnested.\nA list that contains no elements is called an empty list; you can create one with empty\nbrackets,[].\nAs you might expect, you can assign list values to variables:\n>>> cheeses = ['Cheddar','Edam','Gouda']\n>>> numbers = [42,",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1088,
+          "language": "en",
+          "start_char": 677,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5156289492734956,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[9d84fa5418149d6955687fe552a97c59 | starter\\data\\raw\\thinkpython2.pdf | page 113]\nThis loop traverses the list and updates each element.lenreturns the number of elements\nin the list.rangereturns a list of indices from 0 ton−1, wherenis the length of the list.\nEach time through the loopigets the index of the next element. The assignment statement\nin the body usesito read the old value of the element and to assign the new value.\nAforloop over an empty list never runs the body:\nfor x in []:\nprint('This never happens.')\n\n[821667ea2b810277e5a13f9c5e1b490e | starter\\data\\raw\\thinkpython2.pdf | page 114]\nt1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+    "context_ids": [
+      "9d84fa5418149d6955687fe552a97c59",
+      "821667ea2b810277e5a13f9c5e1b490e"
+    ],
+    "context_chars": 785,
+    "elapsed_ms": 63.09699999837903,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "question": "Muốn ghép một list các chuỗi thành một chuỗi bằng delimiter, dùng phương thức nào và gọi trên đối tượng nào?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 117,
+        "evidence": ">>> s = delimiter.join(t)\n>>> s\n'pining for the fjords'\nIn this case the delimiter is a space character, sojoinputs a space between words. To\nconcatenate strings without spaces, you can use the empty string,'', as a delimiter."
+      }
+    ],
+    "results": [
+      {
+        "id": "060dff8e3159ea9152799639bb68c2eb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 117,
+        "text": "on the delimiter and pass the list as a parameter:\n>>> t = ['pining','for','the','fjords']\n>>> delimiter =' '",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 955,
+          "language": "en",
+          "start_char": 846,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6462270406619942,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "3069208bc669bc4ccf54892405b8e5bb",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 111,
+        "text": "10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 628,
+          "language": "en",
+          "start_char": 203,
+          "chapter_title": "Lists"
+        },
+        "score": 0.630007680953236,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "78260012feafeb8d03177df4fc4b03c6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "both, the slice is a copy of the whole list.\n>>> t[:]\n['a','b','c','d','e','f']\nSince lists are mutable, it is often useful to make a copy before performing operations that\nmodify lists.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 444,
+          "language": "en",
+          "start_char": 258,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6115568644736339,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[060dff8e3159ea9152799639bb68c2eb | starter\\data\\raw\\thinkpython2.pdf | page 117]\non the delimiter and pass the list as a parameter:\n>>> t = ['pining','for','the','fjords']\n>>> delimiter =' '\n\n[3069208bc669bc4ccf54892405b8e5bb | starter\\data\\raw\\thinkpython2.pdf | page 111]\n10.1 A list is a sequence\nLike a string, alistis a sequence of values. In a string, the values are characters; in a list,\nthey can be any type. The values in a list are calledelementsor sometimesitems.\nThere are several ways to create a new list; the simplest is to enclose the elements in square\nbrackets ([and]):\n[10, 20, 30, 40]\n['crunchy frog','ram bladder','lark vomit']\nThe first example is a list of four integers. The",
+    "context_ids": [
+      "060dff8e3159ea9152799639bb68c2eb",
+      "3069208bc669bc4ccf54892405b8e5bb"
+    ],
+    "context_chars": 700,
+    "elapsed_ms": 139.79400000243913,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "question": "Hai list chứa cùng các phần tử có nhất thiết phải là cùng một object không?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 118,
+        "evidence": "If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers."
+      }
+    ],
+    "results": [
+      {
+        "id": "d47d0792b790af695fbd82c66b898760",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 118,
+        "text": "ements, but notidentical, because they are not the same object. If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers. If another list has the same elements, we say it has the\nsame value, but it is not the same",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 980,
+          "language": "en",
+          "start_char": 492,
+          "chapter_title": "Lists"
+        },
+        "score": 0.7881215214729309,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "7cf3ed0049e5be2a50989892a12792f8",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 118,
+        "text": "diagram looks like Figure 10.3.\nIn this case we would say that the two lists areequivalent, because they have the same el-",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 491,
+          "language": "en",
+          "start_char": 369,
+          "chapter_title": "Lists"
+        },
+        "score": 0.6492335409382867,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "5c358b04d42122b798f695c5de7b490d",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 117,
+        "text": "10.10 Objects and values\nIf we run these assignment statements:\na ='banana'\nb ='banana'\nWe know thataandbboth refer to a string, but we don’t know whether they refer to the\nsamestring. There are two possible states, shown in Figure 10.2.\nIn one case,aandbrefer to two different objects that have the same value. In the second\ncase, they refer to the same object.\nTo check whether two variables refer to the same object, you can use theisoperator.",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 1629,
+          "language": "en",
+          "start_char": 1183,
+          "chapter_title": "Lists"
+        },
+        "score": 0.5923351821999309,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[d47d0792b790af695fbd82c66b898760 | starter\\data\\raw\\thinkpython2.pdf | page 118]\nements, but notidentical, because they are not the same object. If two objects are identical,\nthey are also equivalent, but if they are equivalent, they are not necessarily identical.\nUntil now, we have been using “object” and “value” interchangeably, but it is more precise\nto say that an object has a value. If you evaluate[1, 2, 3], you get a list object whose\nvalue is a sequence of integers. If another list has the same elements, we say it has the\nsame value, but it is not the same\n\n[7cf3ed0049e5be2a50989892a12792f8 | starter\\data\\raw\\thinkpython2.pdf | page 118]\ndiagram looks like Figure 10.3.\nIn this case we would say that the two lists areequivalent, because they have the same el-",
+    "context_ids": [
+      "d47d0792b790af695fbd82c66b898760",
+      "7cf3ed0049e5be2a50989892a12792f8"
+    ],
+    "context_chars": 776,
+    "elapsed_ms": 94.6323999996821,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "question": "dict.get(key, default) trả về gì khi key không tồn tại trong dictionary?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 127,
+        "evidence": "Dictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value."
+      }
+    ],
+    "results": [
+      {
+        "id": "d3f1db77682411be501d0bff70424c22",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 127,
+        "text": "The histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 2139,
+          "language": "en",
+          "start_char": 1794,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.6173548058290609,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "30ec1f1e388ae9933a71e1e9deb745ba",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "or you might not be able to find a key. Either way, the dictionary wouldn’t work correctly.\nThat’s why keys have to be hashable, and why mutable types like lists aren’t. The simplest\nway to get around this limitation is to use tuples, which we will see in the next chapter.",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 2148,
+          "language": "en",
+          "start_char": 1875,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.5990283071705197,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "cc053a99e662f933628d3998da6ac7e0",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "This line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 1485,
+          "language": "en",
+          "start_char": 1184,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.5762383766103297,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[d3f1db77682411be501d0bff70424c22 | starter\\data\\raw\\thinkpython2.pdf | page 127]\nThe histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)\n\n[30ec1f1e388ae9933a71e1e9deb745ba | starter\\data\\raw\\thinkpython2.pdf | page 130]\nor you might not be able to find a key. Either way, the dictionary wouldn’t work correctly.\nThat’s why keys have to be hashable, and why mutable types like lists aren’t. The simplest\nway to get around this limitation is to use tuples, which we will see in the next chapter.",
+    "context_ids": [
+      "d3f1db77682411be501d0bff70424c22",
+      "30ec1f1e388ae9933a71e1e9deb745ba"
+    ],
+    "context_chars": 784,
+    "elapsed_ms": 74.85410000299453,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "question": "Vì sao list không thể được dùng làm key của dictionary?",
+    "strategy": "dense",
+    "top_k": 3,
+    "budget_chars": 800,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 130,
+        "evidence": "That’s why keys have to be hashable, and why mutable types like lists aren’t."
+      }
+    ],
+    "results": [
+      {
+        "id": "081a223f5d77fb5bb15ea38a7845b7a6",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "11.1 A dictionary is a mapping\nAdictionaryis like a list, but more general. In a list, the indices have to be integers; in a\ndictionary they can be (almost) any type.\nA dictionary contains a collection of indices, which are calledkeys, and a collection of\nvalues. Each key is associated with a single value. The association of a key and a value is\ncalled akey-value pairor sometimes anitem.\nIn mathematical language, a dictionary represents amappingfrom keys to values, so",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 682,
+          "language": "en",
+          "start_char": 210,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.7679929685582259,
+        "strategy": "dense",
+        "hit": false
+      },
+      {
+        "id": "30ec1f1e388ae9933a71e1e9deb745ba",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "or you might not be able to find a key. Either way, the dictionary wouldn’t work correctly.\nThat’s why keys have to be hashable, and why mutable types like lists aren’t. The simplest\nway to get around this limitation is to use tuples, which we will see in the next chapter.",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 2148,
+          "language": "en",
+          "start_char": 1875,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.737341215810369,
+        "strategy": "dense",
+        "hit": true
+      },
+      {
+        "id": "30e313cf250018221dcb3700eb71ee70",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "Lists can be values in a dictionary, as this example shows, but they cannot be keys. Here’s\nwhat happens if you try:\n>>> t = [1, 2, 3]\n>>> d = dict()\n>>> d[t] ='oops'\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in ?\nTypeError: list objects are unhashable\nI mentioned earlier that a dictionary is implemented using a hashtable and that means that\nthe keys have to behashable.\nAhashis a function that",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1366,
+          "language": "en",
+          "start_char": 953,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.7172518845277932,
+        "strategy": "dense",
+        "hit": false
+      }
+    ],
+    "context": "[081a223f5d77fb5bb15ea38a7845b7a6 | starter\\data\\raw\\thinkpython2.pdf | page 125]\n11.1 A dictionary is a mapping\nAdictionaryis like a list, but more general. In a list, the indices have to be integers; in a\ndictionary they can be (almost) any type.\nA dictionary contains a collection of indices, which are calledkeys, and a collection of\nvalues. Each key is associated with a single value. The association of a key and a value is\ncalled akey-value pairor sometimes anitem.\nIn mathematical language, a dictionary represents amappingfrom keys to values, so",
+    "context_ids": [
+      "081a223f5d77fb5bb15ea38a7845b7a6"
+    ],
+    "context_chars": 554,
+    "elapsed_ms": 69.31999999869731,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  }
+]

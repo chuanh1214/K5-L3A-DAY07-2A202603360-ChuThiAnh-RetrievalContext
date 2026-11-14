@@ -1,0 +1,2736 @@
+[
+  {
+    "question": "Hàm len() trả về đại lượng gì khi đối số là một chuỗi? Với fruit = 'banana', sách cho kết quả len(fruit) bằng bao nhiêu?",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "answered",
+    "answer": "Theo sách, len là một hàm dựng sẵn (built-in function) trả về số ký tự (number of characters) trong một chuỗi [5f7e7d7b3f4b11ac0d5c5ae638959407]. Với fruit = 'banana', kết quả là len(fruit) bằng 6 [5f7e7d7b3f4b11ac0d5c5ae638959407].",
+    "citations": [
+      "5f7e7d7b3f4b11ac0d5c5ae638959407"
+    ],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794680993-ykhj4v0h0O21bEfqibI9",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_448f1b8024a148b6a19aef9b",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\":\"len function string fruit banana length\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "len function string fruit banana length",
+        "results": [
+          {
+            "id": "5f7e7d7b3f4b11ac0d5c5ae638959407",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 94,
+            "text": "8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 631,
+              "language": "en",
+              "start_char": 157,
+              "chapter_title": "Strings"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.7021998522043454,
+              "tfidf": 0.5254216784986788
+            }
+          },
+          {
+            "id": "05d9cb659795b20d5c946afb2a0b0216",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 96,
+            "text": "74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 398,
+              "language": "en",
+              "start_char": 0,
+              "chapter_title": "Strings"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.6139828149671204,
+              "tfidf": 0.3217520826134216
+            }
+          },
+          {
+            "id": "14910f352ec10d9fdcdcc227febdee52",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 93,
+            "text": "fruit[i]\n'a'\n>>> fruit[i+1]\n'n'",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1185,
+              "language": "en",
+              "start_char": 1154,
+              "chapter_title": "Strings"
+            },
+            "score": 0.030834914611005692,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 8,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.5541377232711832,
+              "tfidf": 0.3359749071003161
+            }
+          }
+        ],
+        "context": "[5f7e7d7b3f4b11ac0d5c5ae638959407 | starter\\data\\raw\\thinkpython2.pdf | page 94]\n8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,\n\n[05d9cb659795b20d5c946afb2a0b0216 | starter\\data\\raw\\thinkpython2.pdf | page 96]\n74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.\n\n[14910f352ec10d9fdcdcc227febdee52 | starter\\data\\raw\\thinkpython2.pdf | page 93]\nfruit[i]\n'a'\n>>> fruit[i+1]\n'n'",
+        "context_ids": [
+          "5f7e7d7b3f4b11ac0d5c5ae638959407",
+          "05d9cb659795b20d5c946afb2a0b0216",
+          "14910f352ec10d9fdcdcc227febdee52"
+        ],
+        "elapsed_ms": 446.8586000002688,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794680994-6DPXRObs4NMpjFgP4rrt",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "01a1db52beb63feceb9ea73221074335",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"len function string length\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "len function string length",
+        "results": [
+          {
+            "id": "81ccf3e8fe35b6643957666b728e4f5f",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 102,
+            "text": "a string).",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 489,
+              "language": "en",
+              "start_char": 479,
+              "chapter_title": "Strings"
+            },
+            "score": 0.032266458495966696,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.5876801013946575,
+              "tfidf": 0.3193211193456062
+            }
+          },
+          {
+            "id": "5f7e7d7b3f4b11ac0d5c5ae638959407",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 94,
+            "text": "8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 631,
+              "language": "en",
+              "start_char": 157,
+              "chapter_title": "Strings"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 3,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.5447482738048954,
+              "tfidf": 0.33641841523388455
+            }
+          },
+          {
+            "id": "7efdb8b01db5090879f89dec682b1dc1",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 108,
+            "text": "len(word) <= 1:\nreturn True",
+            "metadata": {
+              "chapter": 9,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 522,
+              "language": "en",
+              "start_char": 495,
+              "chapter_title": "Case study: word play"
+            },
+            "score": 0.03177805800756621,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 5,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.5046983662067879,
+              "tfidf": 0.3589580929492195
+            }
+          }
+        ],
+        "context": "[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).\n\n[5f7e7d7b3f4b11ac0d5c5ae638959407 | starter\\data\\raw\\thinkpython2.pdf | page 94]\n8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,\n\n[7efdb8b01db5090879f89dec682b1dc1 | starter\\data\\raw\\thinkpython2.pdf | page 108]\nlen(word) <= 1:\nreturn True\n\n[05d9cb659795b20d5c946afb2a0b0216 | starter\\data\\raw\\thinkpython2.pdf | page 96]\n74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.\n\n[14910f352ec10d9fdcdcc227febdee52 | starter\\data\\raw\\thinkpython2.pdf | page 93]\nfruit[i]\n'a'\n>>> fruit[i+1]\n'n'",
+        "context_ids": [
+          "81ccf3e8fe35b6643957666b728e4f5f",
+          "5f7e7d7b3f4b11ac0d5c5ae638959407",
+          "7efdb8b01db5090879f89dec682b1dc1",
+          "05d9cb659795b20d5c946afb2a0b0216",
+          "14910f352ec10d9fdcdcc227febdee52"
+        ],
+        "elapsed_ms": 212.8372999941348,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794680997-1Q5Kq73Fz4e34hRrexKT",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "01a1db52c96193eb72db46122a517282",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\":\"answered\",\"answer\":\"The user asked in Vietnamese. I have evidence.\" , \"citations\":[\"5f7e7d7b3f4b11ac0d5c5ae638959407\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "format_retry",
+        "attempt": 1,
+        "reason": "Citation thiếu, không có trong context hiện tại, hoặc chưa xuất hiện dưới dạng [chunk-id] trong answer. Các ID hiện có trong context: [\"81ccf3e8fe35b6643957666b728e4f5f\", \"5f7e7d7b3f4b11ac0d5c5ae638959407\", \"7efdb8b01db5090879f89dec682b1dc1\", \"05d9cb659795b20d5c946afb2a0b0216\", \"14910f352ec10d9fdcdcc227febdee52\"]. Chỉ dùng nguồn thực sự hỗ trợ câu trả lời. Nếu chưa đủ evidence, search tiếp nếu còn lượt hoặc finish với status='abstain', citations=[]."
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681000-vYsQGWBePvFE3LEbviKy",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "01a1db52d492bef7d40c73e48a0451d3",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"answered\", \"answer\": \"Theo sách, len là một hàm dựng sẵn (built-in function) trả về số ký tự (number of characters) trong một chuỗi [5f7e7d7b3f4b11ac0d5c5ae638959407]. Với fruit = 'banana', kết quả là len(fruit) bằng 6 [5f7e7d7b3f4b11ac0d5c5ae638959407].\", \"citations\": [\"5f7e7d7b3f4b11ac0d5c5ae638959407\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "answered",
+        "answer": "Theo sách, len là một hàm dựng sẵn (built-in function) trả về số ký tự (number of characters) trong một chuỗi [5f7e7d7b3f4b11ac0d5c5ae638959407]. Với fruit = 'banana', kết quả là len(fruit) bằng 6 [5f7e7d7b3f4b11ac0d5c5ae638959407].",
+        "citations": [
+          "5f7e7d7b3f4b11ac0d5c5ae638959407"
+        ]
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 683,
+        "completion_tokens": 50,
+        "total_tokens": 733,
+        "cost": 6.9852e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 6.9852e-05,
+          "upstream_inference_prompt_cost": 3.3852e-05,
+          "upstream_inference_completions_cost": 3.6e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 6,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1343,
+        "completion_tokens": 215,
+        "total_tokens": 1558,
+        "cost": 0.00052115,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00052115,
+          "upstream_inference_prompt_cost": 0.0004029,
+          "upstream_inference_completions_cost": 0.00011825
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1474,
+        "completion_tokens": 257,
+        "total_tokens": 1731,
+        "cost": 0.00058355,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00058355,
+          "upstream_inference_prompt_cost": 0.0004422,
+          "upstream_inference_completions_cost": 0.00014135
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 2056,
+        "completion_tokens": 364,
+        "total_tokens": 2420,
+        "cost": 0.000403048,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000403048,
+          "upstream_inference_prompt_cost": 0.000202848,
+          "upstream_inference_completions_cost": 0.0002002
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).\n\n[5f7e7d7b3f4b11ac0d5c5ae638959407 | starter\\data\\raw\\thinkpython2.pdf | page 94]\n8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,\n\n[7efdb8b01db5090879f89dec682b1dc1 | starter\\data\\raw\\thinkpython2.pdf | page 108]\nlen(word) <= 1:\nreturn True\n\n[05d9cb659795b20d5c946afb2a0b0216 | starter\\data\\raw\\thinkpython2.pdf | page 96]\n74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.\n\n[14910f352ec10d9fdcdcc227febdee52 | starter\\data\\raw\\thinkpython2.pdf | page 93]\nfruit[i]\n'a'\n>>> fruit[i+1]\n'n'",
+    "context_ids": [
+      "81ccf3e8fe35b6643957666b728e4f5f",
+      "5f7e7d7b3f4b11ac0d5c5ae638959407",
+      "7efdb8b01db5090879f89dec682b1dc1",
+      "05d9cb659795b20d5c946afb2a0b0216",
+      "14910f352ec10d9fdcdcc227febdee52"
+    ],
+    "search_count": 2,
+    "elapsed_ms": 11464.11999999691,
+    "reported_cost_usd": 0.0015776,
+    "query_id": "test_q01",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Khi hai toán hạng đều là chuỗi, toán tử in trả về True trong điều kiện nào?",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "answered",
+    "answer": "Khi cả hai toán hạng đều là chuỗi, toán tử `in` trả về `True` nếu chuỗi thứ nhất xuất hiện dưới dạng chuỗi con (substring) trong chuỗi thứ hai. Ví dụ, `'a' in 'banana'` trả về `True`, còn `'seed' in 'banana'` trả về `False` [f8c3230947b3d762261cb092d46a580f].",
+    "citations": [
+      "f8c3230947b3d762261cb092d46a580f"
+    ],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681003-qc6AwAZWPu8kulwz01HG",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_7fab0843065847c7bcda5268",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"Python \\\"in\\\" operator two strings returns True substring\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "Python \"in\" operator two strings returns True substring",
+        "results": [
+          {
+            "id": "967e2b87c4e442ac3861af44ba2d7c0a",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 115,
+            "text": "For example, the following function takes a list of strings and returns a list that contains\nonly the uppercase strings:\ndef only_upper(t):\nres = []\nfor s in t:\nif s.isupper():\nres.append(s)\nreturn res",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line",
+              "end_char": 1637,
+              "language": "en",
+              "start_char": 1436,
+              "chapter_title": "Lists"
+            },
+            "score": 0.030303030303030304,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 6,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.47788038981673864,
+              "tfidf": 0.13560209569073364
+            }
+          },
+          {
+            "id": "153768102cd51f299ab27f01507fc849",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 95,
+            "text": "8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1263,
+              "language": "en",
+              "start_char": 831,
+              "chapter_title": "Strings"
+            },
+            "score": 0.029910714285714284,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 4,
+              "tfidf": 10
+            },
+            "retriever_scores": {
+              "dense": 0.5031325817108154,
+              "tfidf": 0.12668685885434217
+            }
+          },
+          {
+            "id": "529bae46a9e869e4f893c8f71a863842",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 99,
+            "text": "8.10. String comparison 77\nWith well-chosen variable names, Python sometimes reads like English. You could read\nthis loop, “for (each) letter in (the first) word, if (the) letter (appears) in (the second) word,\nprint (the) letter.”\nHere’s what you get if you compare apples and oranges:\n>>> in_both('apples','oranges')\na\ne\ns",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 324,
+              "language": "en",
+              "start_char": 0,
+              "chapter_title": "Strings"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.5556737350128217
+            }
+          }
+        ],
+        "context": "[967e2b87c4e442ac3861af44ba2d7c0a | starter\\data\\raw\\thinkpython2.pdf | page 115]\nFor example, the following function takes a list of strings and returns a list that contains\nonly the uppercase strings:\ndef only_upper(t):\nres = []\nfor s in t:\nif s.isupper():\nres.append(s)\nreturn res\n\n[153768102cd51f299ab27f01507fc849 | starter\\data\\raw\\thinkpython2.pdf | page 95]\n8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in\n\n[529bae46a9e869e4f893c8f71a863842 | starter\\data\\raw\\thinkpython2.pdf | page 99]\n8.10. String comparison 77\nWith well-chosen variable names, Python sometimes reads like English. You could read\nthis loop, “for (each) letter in (the first) word, if (the) letter (appears) in (the second) word,\nprint (the) letter.”\nHere’s what you get if you compare apples and oranges:\n>>> in_both('apples','oranges')\na\ne\ns",
+        "context_ids": [
+          "967e2b87c4e442ac3861af44ba2d7c0a",
+          "153768102cd51f299ab27f01507fc849",
+          "529bae46a9e869e4f893c8f71a863842"
+        ],
+        "elapsed_ms": 656.5501000004588,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681005-mKjTAHl3Aumf5PjQe5Bu",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_c950c060a40a4872ba00bbfa",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"Think Python \\\"in\\\" operator string \\\"substring\\\"\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "Think Python \"in\" operator string \"substring\"",
+        "results": [
+          {
+            "id": "153768102cd51f299ab27f01507fc849",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 95,
+            "text": "8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1263,
+              "language": "en",
+              "start_char": 831,
+              "chapter_title": "Strings"
+            },
+            "score": 0.03125,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 4,
+              "tfidf": 4
+            },
+            "retriever_scores": {
+              "dense": 0.5734570539108288,
+              "tfidf": 0.15086408121420433
+            }
+          },
+          {
+            "id": "81ccf3e8fe35b6643957666b728e4f5f",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 102,
+            "text": "a string).",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 489,
+              "language": "en",
+              "start_char": 479,
+              "chapter_title": "Strings"
+            },
+            "score": 0.031054405392392875,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 7,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.5415618581045287,
+              "tfidf": 0.22034250690262852
+            }
+          },
+          {
+            "id": "18edaf2d96821ff802e014131e5eaed9",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 138,
+            "text": "work with tuples and other sequences; Python starts by comparing",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 931,
+              "language": "en",
+              "start_char": 867,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.029857397504456328,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 8,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.5217098619592034,
+              "tfidf": 0.09958968849109946
+            }
+          }
+        ],
+        "context": "[153768102cd51f299ab27f01507fc849 | starter\\data\\raw\\thinkpython2.pdf | page 95]\n8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in\n\n[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).\n\n[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[967e2b87c4e442ac3861af44ba2d7c0a | starter\\data\\raw\\thinkpython2.pdf | page 115]\nFor example, the following function takes a list of strings and returns a list that contains\nonly the uppercase strings:\ndef only_upper(t):\nres = []\nfor s in t:\nif s.isupper():\nres.append(s)\nreturn res\n\n[529bae46a9e869e4f893c8f71a863842 | starter\\data\\raw\\thinkpython2.pdf | page 99]\n8.10. String comparison 77\nWith well-chosen variable names, Python sometimes reads like English. You could read\nthis loop, “for (each) letter in (the first) word, if (the) letter (appears) in (the second) word,\nprint (the) letter.”\nHere’s what you get if you compare apples and oranges:\n>>> in_both('apples','oranges')\na\ne\ns",
+        "context_ids": [
+          "153768102cd51f299ab27f01507fc849",
+          "81ccf3e8fe35b6643957666b728e4f5f",
+          "18edaf2d96821ff802e014131e5eaed9",
+          "967e2b87c4e442ac3861af44ba2d7c0a",
+          "529bae46a9e869e4f893c8f71a863842"
+        ],
+        "elapsed_ms": 1278.232199998456,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681008-pBYamkhwnU1S6i893N5K",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_3a383c35b8d949b2909aecac",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"\\\"If the first operand is a substring\\\" \\\"in\\\" Python Think Python\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "\"If the first operand is a substring\" \"in\" Python Think Python",
+        "results": [
+          {
+            "id": "18edaf2d96821ff802e014131e5eaed9",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 138,
+            "text": "work with tuples and other sequences; Python starts by comparing",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 931,
+              "language": "en",
+              "start_char": 867,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.031754032258064516,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 4
+            },
+            "retriever_scores": {
+              "dense": 0.5867031987519028,
+              "tfidf": 0.17023334219051775
+            }
+          },
+          {
+            "id": "529bae46a9e869e4f893c8f71a863842",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 99,
+            "text": "8.10. String comparison 77\nWith well-chosen variable names, Python sometimes reads like English. You could read\nthis loop, “for (each) letter in (the first) word, if (the) letter (appears) in (the second) word,\nprint (the) letter.”\nHere’s what you get if you compare apples and oranges:\n>>> in_both('apples','oranges')\na\ne\ns",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 324,
+              "language": "en",
+              "start_char": 0,
+              "chapter_title": "Strings"
+            },
+            "score": 0.031544957774465976,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.6510534480528074,
+              "tfidf": 0.1533475140908378
+            }
+          },
+          {
+            "id": "153768102cd51f299ab27f01507fc849",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 95,
+            "text": "8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1263,
+              "language": "en",
+              "start_char": 831,
+              "chapter_title": "Strings"
+            },
+            "score": 0.030798389007344232,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 7,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.5238727331161499,
+              "tfidf": 0.19492911253666448
+            }
+          }
+        ],
+        "context": "[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[529bae46a9e869e4f893c8f71a863842 | starter\\data\\raw\\thinkpython2.pdf | page 99]\n8.10. String comparison 77\nWith well-chosen variable names, Python sometimes reads like English. You could read\nthis loop, “for (each) letter in (the first) word, if (the) letter (appears) in (the second) word,\nprint (the) letter.”\nHere’s what you get if you compare apples and oranges:\n>>> in_both('apples','oranges')\na\ne\ns\n\n[153768102cd51f299ab27f01507fc849 | starter\\data\\raw\\thinkpython2.pdf | page 95]\n8.4 String slices\nA segment of a string is called aslice. Selecting a slice is similar to selecting a character:\n>>> s ='Monty Python'\n>>> s[0:5]\n'Monty'\n>>> s[6:12]\n'Python'\nThe operator[n:m]returns the part of the string from the “n-eth” character to the “m-eth”\ncharacter, including the first but excluding the last. This behavior is counterintuitive, but\nit might help to imagine the indices pointingbetweenthe characters, as in\n\n[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).\n\n[967e2b87c4e442ac3861af44ba2d7c0a | starter\\data\\raw\\thinkpython2.pdf | page 115]\nFor example, the following function takes a list of strings and returns a list that contains\nonly the uppercase strings:\ndef only_upper(t):\nres = []\nfor s in t:\nif s.isupper():\nres.append(s)\nreturn res",
+        "context_ids": [
+          "18edaf2d96821ff802e014131e5eaed9",
+          "529bae46a9e869e4f893c8f71a863842",
+          "153768102cd51f299ab27f01507fc849",
+          "81ccf3e8fe35b6643957666b728e4f5f",
+          "967e2b87c4e442ac3861af44ba2d7c0a"
+        ],
+        "elapsed_ms": 271.8410000015865,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681010-CeJlmk2bY9CGoQseHEsh",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_84704cb7e6314118ba85bfe5",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"\\\"boolean operator\\\" \\\"takes two strings\\\" \\\"first appears as a substring\\\"\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "\"boolean operator\" \"takes two strings\" \"first appears as a substring\"",
+        "results": [
+          {
+            "id": "f8c3230947b3d762261cb092d46a580f",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 98,
+            "text": "8.9 Theinoperator\nThe wordinis a boolean operator that takes two strings and returnsTrueif the first ap-\npears as a substring in the second:\n>>>'a'in'banana'\nTrue\n>>>'seed'in'banana'\nFalse\nFor example, the following function prints all the letters fromword1that also appear in\nword2:\ndef in_both(word1, word2):\nfor letter in word1:\nif letter in word2:\nprint(letter)",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 1543,
+              "language": "en",
+              "start_char": 1178,
+              "chapter_title": "Strings"
+            },
+            "score": 0.03177805800756621,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 5,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.5196852684020996,
+              "tfidf": 0.3130758892252073
+            }
+          },
+          {
+            "id": "05b1cdbc27fb8047e6be90f83d672700",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 111,
+            "text": "second is a list of three strings. The elements",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 676,
+              "language": "en",
+              "start_char": 629,
+              "chapter_title": "Lists"
+            },
+            "score": 0.03128054740957967,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.5571197271347046,
+              "tfidf": 0.13330029707761729
+            }
+          },
+          {
+            "id": "2ddf4d83aac112f8597a15d7a598f240",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 112,
+            "text": "10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 622,
+              "language": "en",
+              "start_char": 130,
+              "chapter_title": "Lists"
+            },
+            "score": 0.030090497737556562,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 8,
+              "tfidf": 5
+            },
+            "retriever_scores": {
+              "dense": 0.5017818362051798,
+              "tfidf": 0.13410735271236934
+            }
+          }
+        ],
+        "context": "[f8c3230947b3d762261cb092d46a580f | starter\\data\\raw\\thinkpython2.pdf | page 98]\n8.9 Theinoperator\nThe wordinis a boolean operator that takes two strings and returnsTrueif the first ap-\npears as a substring in the second:\n>>>'a'in'banana'\nTrue\n>>>'seed'in'banana'\nFalse\nFor example, the following function prints all the letters fromword1that also appear in\nword2:\ndef in_both(word1, word2):\nfor letter in word1:\nif letter in word2:\nprint(letter)\n\n[05b1cdbc27fb8047e6be90f83d672700 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nsecond is a list of three strings. The elements\n\n[2ddf4d83aac112f8597a15d7a598f240 | starter\\data\\raw\\thinkpython2.pdf | page 112]\n10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,\n\n[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).",
+        "context_ids": [
+          "f8c3230947b3d762261cb092d46a580f",
+          "05b1cdbc27fb8047e6be90f83d672700",
+          "2ddf4d83aac112f8597a15d7a598f240",
+          "18edaf2d96821ff802e014131e5eaed9",
+          "81ccf3e8fe35b6643957666b728e4f5f"
+        ],
+        "elapsed_ms": 283.24079999583773,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681012-Sk4Ah9cTjGhMKGXdlKux",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_15aa922959db42c7a42243a6",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"answered\", \"answer\": \"Khi cả hai toán hạng đều là chuỗi, toán tử `in` trả về `True` nếu chuỗi thứ nhất xuất hiện dưới dạng chuỗi con (substring) trong chuỗi thứ hai. Ví dụ, `'a' in 'banana'` trả về `True`, còn `'seed' in 'banana'` trả về `False` [f8c3230947b3d762261cb092d46a580f].\", \"citations\": [\"f8c3230947b3d762261cb092d46a580f\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "answered",
+        "answer": "Khi cả hai toán hạng đều là chuỗi, toán tử `in` trả về `True` nếu chuỗi thứ nhất xuất hiện dưới dạng chuỗi con (substring) trong chuỗi thứ hai. Ví dụ, `'a' in 'banana'` trả về `True`, còn `'seed' in 'banana'` trả về `False` [f8c3230947b3d762261cb092d46a580f].",
+        "citations": [
+          "f8c3230947b3d762261cb092d46a580f"
+        ]
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 663,
+        "completion_tokens": 99,
+        "total_tokens": 762,
+        "cost": 9.8466e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 9.8466e-05,
+          "upstream_inference_prompt_cost": 3.7086e-05,
+          "upstream_inference_completions_cost": 6.138e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1369,
+        "completion_tokens": 82,
+        "total_tokens": 1451,
+        "cost": 0.000236186,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000236186,
+          "upstream_inference_prompt_cost": 0.000185346,
+          "upstream_inference_completions_cost": 5.084e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1499,
+        "completion_tokens": 59,
+        "total_tokens": 1558,
+        "cost": 0.000249226,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000249226,
+          "upstream_inference_prompt_cost": 0.000212646,
+          "upstream_inference_completions_cost": 3.658e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1492,
+        "completion_tokens": 96,
+        "total_tokens": 1588,
+        "cost": 0.000270696,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000270696,
+          "upstream_inference_prompt_cost": 0.000211176,
+          "upstream_inference_completions_cost": 5.952e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1438,
+        "completion_tokens": 292,
+        "total_tokens": 1730,
+        "cost": 0.000380876,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000380876,
+          "upstream_inference_prompt_cost": 0.000199836,
+          "upstream_inference_completions_cost": 0.00018104
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 88,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[f8c3230947b3d762261cb092d46a580f | starter\\data\\raw\\thinkpython2.pdf | page 98]\n8.9 Theinoperator\nThe wordinis a boolean operator that takes two strings and returnsTrueif the first ap-\npears as a substring in the second:\n>>>'a'in'banana'\nTrue\n>>>'seed'in'banana'\nFalse\nFor example, the following function prints all the letters fromword1that also appear in\nword2:\ndef in_both(word1, word2):\nfor letter in word1:\nif letter in word2:\nprint(letter)\n\n[05b1cdbc27fb8047e6be90f83d672700 | starter\\data\\raw\\thinkpython2.pdf | page 111]\nsecond is a list of three strings. The elements\n\n[2ddf4d83aac112f8597a15d7a598f240 | starter\\data\\raw\\thinkpython2.pdf | page 112]\n10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,\n\n[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[81ccf3e8fe35b6643957666b728e4f5f | starter\\data\\raw\\thinkpython2.pdf | page 102]\na string).",
+    "context_ids": [
+      "f8c3230947b3d762261cb092d46a580f",
+      "05b1cdbc27fb8047e6be90f83d672700",
+      "2ddf4d83aac112f8597a15d7a598f240",
+      "18edaf2d96821ff802e014131e5eaed9",
+      "81ccf3e8fe35b6643957666b728e4f5f"
+    ],
+    "search_count": 4,
+    "elapsed_ms": 11372.892100000172,
+    "reported_cost_usd": 0.00123545,
+    "query_id": "test_q02",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Theo sách, append và extend khác nhau như thế nào về những phần tử được thêm vào list?",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "answered",
+    "answer": "Theo sách, `append` thêm **một phần tử mới** vào cuối list. Ví dụ, `t = ['a','b','c']`; sau `t.append('d')`, `t` thành `['a','b','c','d']` [fd266d2cdcc3cb73cc223e2a59a0e21b].\n\nNgược lại, `extend` nhận **một list làm đối số** và thêm **tất cả các phần tử** của list đó vào cuối list hiện tại. Ví dụ, với `t1 = ['a','b','c']` và `t2 = ['d','e']`, sau `t1.extend(t2)`, `t1` thành `['a','b','c','d','e']`; ví dụ này cũng cho thấy `t2` không bị thay đổi [821667ea2b810277e5a13f9c5e1b490e].",
+    "citations": [
+      "fd266d2cdcc3cb73cc223e2a59a0e21b",
+      "821667ea2b810277e5a13f9c5e1b490e"
+    ],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681015-4GSZ0zk1ssC0YN6bxYgU",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_76705_0",
+            "function": {
+              "name": "search",
+              "arguments": "{ \"query\": \"difference between append and extend list methods in Python Think Python\" }"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "difference between append and extend list methods in Python Think Python",
+        "results": [
+          {
+            "id": "fd266d2cdcc3cb73cc223e2a59a0e21b",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 114,
+            "text": "10.6 List methods\nPython provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:\n>>> t1 = ['a','b','c']\n>>> t2 = ['d','e']\n>>>",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 915,
+              "language": "en",
+              "start_char": 615,
+              "chapter_title": "Lists"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.6845811197411359,
+              "tfidf": 0.22406209710002722
+            }
+          },
+          {
+            "id": "d2c4495d5b525ff62fd45434ea57b80e",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 143,
+            "text": "modify existing lists. But Python provides the built-in functionsorted, which takes any\nsequence and returns a new list with the same elements in sorted order, andreversed,\nwhich takes a sequence and returns an iterator that traverses the list in reverse order.",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line",
+              "end_char": 1897,
+              "language": "en",
+              "start_char": 1636,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.03128054740957967,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.5812175273895305,
+              "tfidf": 0.13367095985226668
+            }
+          },
+          {
+            "id": "e564b25d396985e8aa898422723bd760",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 119,
+            "text": "Since the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line",
+              "end_char": 1291,
+              "language": "en",
+              "start_char": 939,
+              "chapter_title": "Lists"
+            },
+            "score": 0.031024531024531024,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 6,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.5124557904925481,
+              "tfidf": 0.15693152948387382
+            }
+          }
+        ],
+        "context": "[fd266d2cdcc3cb73cc223e2a59a0e21b | starter\\data\\raw\\thinkpython2.pdf | page 114]\n10.6 List methods\nPython provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:\n>>> t1 = ['a','b','c']\n>>> t2 = ['d','e']\n>>>\n\n[d2c4495d5b525ff62fd45434ea57b80e | starter\\data\\raw\\thinkpython2.pdf | page 143]\nmodify existing lists. But Python provides the built-in functionsorted, which takes any\nsequence and returns a new list with the same elements in sorted order, andreversed,\nwhich takes a sequence and returns an iterator that traverses the list in reverse order.\n\n[e564b25d396985e8aa898422723bd760 | starter\\data\\raw\\thinkpython2.pdf | page 119]\nSince the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone",
+        "context_ids": [
+          "fd266d2cdcc3cb73cc223e2a59a0e21b",
+          "d2c4495d5b525ff62fd45434ea57b80e",
+          "e564b25d396985e8aa898422723bd760"
+        ],
+        "elapsed_ms": 924.1466999956174,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681017-iADRKmQJPpgjHjDVR4wJ",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_71870_0",
+            "function": {
+              "name": "search",
+              "arguments": "{ \"query\": \"extend takes a list as argument and appends all of the elements example t1 t2\" }"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "extend takes a list as argument and appends all of the elements example t1 t2",
+        "results": [
+          {
+            "id": "fd266d2cdcc3cb73cc223e2a59a0e21b",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 114,
+            "text": "10.6 List methods\nPython provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:\n>>> t1 = ['a','b','c']\n>>> t2 = ['d','e']\n>>>",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 915,
+              "language": "en",
+              "start_char": 615,
+              "chapter_title": "Lists"
+            },
+            "score": 0.03252247488101534,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.6622120544657689,
+              "tfidf": 0.38861507374511034
+            }
+          },
+          {
+            "id": "821667ea2b810277e5a13f9c5e1b490e",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 114,
+            "text": "t1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1096,
+              "language": "en",
+              "start_char": 916,
+              "chapter_title": "Lists"
+            },
+            "score": 0.032266458495966696,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 3,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.6154288511957151,
+              "tfidf": 0.38940671501464813
+            }
+          },
+          {
+            "id": "e564b25d396985e8aa898422723bd760",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 119,
+            "text": "Since the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line",
+              "end_char": 1291,
+              "language": "en",
+              "start_char": 939,
+              "chapter_title": "Lists"
+            },
+            "score": 0.03200204813108039,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.6226499530494314,
+              "tfidf": 0.2884341609674154
+            }
+          }
+        ],
+        "context": "[fd266d2cdcc3cb73cc223e2a59a0e21b | starter\\data\\raw\\thinkpython2.pdf | page 114]\n10.6 List methods\nPython provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:\n>>> t1 = ['a','b','c']\n>>> t2 = ['d','e']\n>>>\n\n[821667ea2b810277e5a13f9c5e1b490e | starter\\data\\raw\\thinkpython2.pdf | page 114]\nt1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t\n\n[e564b25d396985e8aa898422723bd760 | starter\\data\\raw\\thinkpython2.pdf | page 119]\nSince the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone\n\n[d2c4495d5b525ff62fd45434ea57b80e | starter\\data\\raw\\thinkpython2.pdf | page 143]\nmodify existing lists. But Python provides the built-in functionsorted, which takes any\nsequence and returns a new list with the same elements in sorted order, andreversed,\nwhich takes a sequence and returns an iterator that traverses the list in reverse order.",
+        "context_ids": [
+          "fd266d2cdcc3cb73cc223e2a59a0e21b",
+          "821667ea2b810277e5a13f9c5e1b490e",
+          "e564b25d396985e8aa898422723bd760",
+          "d2c4495d5b525ff62fd45434ea57b80e"
+        ],
+        "elapsed_ms": 194.93339999462478,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681018-iI0eWR78lSLpeLX1jH7z",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_77144_0",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\":\"answered\",\"answer\":\"Theo sách, `append` thêm **một phần tử mới** vào cuối list. Ví dụ, `t = ['a','b','c']`; sau `t.append('d')`, `t` thành `['a','b','c','d']` [fd266d2cdcc3cb73cc223e2a59a0e21b].\\n\\nNgược lại, `extend` nhận **một list làm đối số** và thêm **tất cả các phần tử** của list đó vào cuối list hiện tại. Ví dụ, với `t1 = ['a','b','c']` và `t2 = ['d','e']`, sau `t1.extend(t2)`, `t1` thành `['a','b','c','d','e']`; ví dụ này cũng cho thấy `t2` không bị thay đổi [821667ea2b810277e5a13f9c5e1b490e].\",\"citations\":[\"fd266d2cdcc3cb73cc223e2a59a0e21b\",\"821667ea2b810277e5a13f9c5e1b490e\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "answered",
+        "answer": "Theo sách, `append` thêm **một phần tử mới** vào cuối list. Ví dụ, `t = ['a','b','c']`; sau `t.append('d')`, `t` thành `['a','b','c','d']` [fd266d2cdcc3cb73cc223e2a59a0e21b].\n\nNgược lại, `extend` nhận **một list làm đối số** và thêm **tất cả các phần tử** của list đó vào cuối list hiện tại. Ví dụ, với `t1 = ['a','b','c']` và `t2 = ['d','e']`, sau `t1.extend(t2)`, `t1` thành `['a','b','c','d','e']`; ví dụ này cũng cho thấy `t2` không bị thay đổi [821667ea2b810277e5a13f9c5e1b490e].",
+        "citations": [
+          "fd266d2cdcc3cb73cc223e2a59a0e21b",
+          "821667ea2b810277e5a13f9c5e1b490e"
+        ]
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 661,
+        "completion_tokens": 33,
+        "total_tokens": 694,
+        "cost": 3.49488e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.49488e-05,
+          "upstream_inference_prompt_cost": 1.91088e-05,
+          "upstream_inference_completions_cost": 1.584e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1307,
+        "completion_tokens": 49,
+        "total_tokens": 1356,
+        "cost": 0.0001201488,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001201488,
+          "upstream_inference_prompt_cost": 9.66288e-05,
+          "upstream_inference_completions_cost": 2.352e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1476,
+        "completion_tokens": 331,
+        "total_tokens": 1807,
+        "cost": 0.0002757888,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0002757888,
+          "upstream_inference_prompt_cost": 0.0001169088,
+          "upstream_inference_completions_cost": 0.00015888
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[fd266d2cdcc3cb73cc223e2a59a0e21b | starter\\data\\raw\\thinkpython2.pdf | page 114]\n10.6 List methods\nPython provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:\n>>> t1 = ['a','b','c']\n>>> t2 = ['d','e']\n>>>\n\n[821667ea2b810277e5a13f9c5e1b490e | starter\\data\\raw\\thinkpython2.pdf | page 114]\nt1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t\n\n[e564b25d396985e8aa898422723bd760 | starter\\data\\raw\\thinkpython2.pdf | page 119]\nSince the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone\n\n[d2c4495d5b525ff62fd45434ea57b80e | starter\\data\\raw\\thinkpython2.pdf | page 143]\nmodify existing lists. But Python provides the built-in functionsorted, which takes any\nsequence and returns a new list with the same elements in sorted order, andreversed,\nwhich takes a sequence and returns an iterator that traverses the list in reverse order.",
+    "context_ids": [
+      "fd266d2cdcc3cb73cc223e2a59a0e21b",
+      "821667ea2b810277e5a13f9c5e1b490e",
+      "e564b25d396985e8aa898422723bd760",
+      "d2c4495d5b525ff62fd45434ea57b80e"
+    ],
+    "search_count": 2,
+    "elapsed_ms": 6348.0688000054215,
+    "reported_cost_usd": 0.00043088640000000004,
+    "query_id": "test_q03",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Muốn kiểm tra 'uno' xuất hiện trong các giá trị của dictionary eng2sp thay vì kiểm tra khóa, sách dùng phương thức nào trước phép in?",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "answered",
+    "answer": "Sách dùng phương thức `values()` của dictionary để lấy tập giá trị, rồi mới dùng toán tử `in`:\n\n```python\n>>> vals = eng2sp.values()\n>>> 'uno' in vals\nTrue\n```\n\nNhư vậy, `values()` là phương thức được dùng trước phép kiểm tra/in kết quả [ea1fdb7aaae473ec200e4412fa125712].",
+    "citations": [
+      "ea1fdb7aaae473ec200e4412fa125712"
+    ],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681021-Yjdy5BOdzDqyowuP9Eag",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-21cae9cf-e51f-4d11-9f86-d43c14d49350",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"eng2sp 'uno' values dictionary check values instead of keys\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "eng2sp 'uno' values dictionary check values instead of keys",
+        "results": [
+          {
+            "id": "2ca87670aa0a333e820e4c5c43c35d32",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 126,
+            "text": "ger indices. Instead, you use the keys to look up the corresponding values:\n>>> eng2sp['two']\n'dos'\nThe key'two'always maps to the value'dos'so the order of the items doesn’t matter.\nIf the key isn’t in the dictionary, you get an exception:\n>>> eng2sp['four']\nKeyError:'four'\nThelenfunction works on dictionaries; it returns the number of key-value pairs:\n>>> len(eng2sp)\n3\nTheinoperator works on",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 872,
+              "language": "en",
+              "start_char": 476,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.032266458495966696,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 3
+            },
+            "retriever_scores": {
+              "dense": 0.6872850842902026,
+              "tfidf": 0.2891050317523121
+            }
+          },
+          {
+            "id": "ea1fdb7aaae473ec200e4412fa125712",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 126,
+            "text": "in the dictionary (appearing as a value is not good enough).\n>>>'one'in eng2sp\nTrue\n>>>'uno'in eng2sp\nFalse\nTo see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue\nTheinoperator uses different algorithms for lists and dictionaries. For lists, it searches the",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line",
+              "end_char": 1347,
+              "language": "en",
+              "start_char": 939,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.032266458495966696,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 3,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.6567167844345114,
+              "tfidf": 0.44111479560828465
+            }
+          },
+          {
+            "id": "cc053a99e662f933628d3998da6ac7e0",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 125,
+            "text": "This line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line",
+              "end_char": 1485,
+              "language": "en",
+              "start_char": 1184,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.031054405392392875,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2,
+              "tfidf": 7
+            },
+            "retriever_scores": {
+              "dense": 0.6573978474857989,
+              "tfidf": 0.23728253064699056
+            }
+          }
+        ],
+        "context": "[2ca87670aa0a333e820e4c5c43c35d32 | starter\\data\\raw\\thinkpython2.pdf | page 126]\nger indices. Instead, you use the keys to look up the corresponding values:\n>>> eng2sp['two']\n'dos'\nThe key'two'always maps to the value'dos'so the order of the items doesn’t matter.\nIf the key isn’t in the dictionary, you get an exception:\n>>> eng2sp['four']\nKeyError:'four'\nThelenfunction works on dictionaries; it returns the number of key-value pairs:\n>>> len(eng2sp)\n3\nTheinoperator works on\n\n[ea1fdb7aaae473ec200e4412fa125712 | starter\\data\\raw\\thinkpython2.pdf | page 126]\nin the dictionary (appearing as a value is not good enough).\n>>>'one'in eng2sp\nTrue\n>>>'uno'in eng2sp\nFalse\nTo see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue\nTheinoperator uses different algorithms for lists and dictionaries. For lists, it searches the\n\n[cc053a99e662f933628d3998da6ac7e0 | starter\\data\\raw\\thinkpython2.pdf | page 125]\nThis line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+        "context_ids": [
+          "2ca87670aa0a333e820e4c5c43c35d32",
+          "ea1fdb7aaae473ec200e4412fa125712",
+          "cc053a99e662f933628d3998da6ac7e0"
+        ],
+        "elapsed_ms": 1061.210800005938,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681024-TuKneKDtZj34Owbzk4VF",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-d0f5c9ec-90fd-4942-a2cf-77917c645bc9",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"answered\", \"answer\": \"Sách dùng phương thức `values()` của dictionary để lấy tập giá trị, rồi mới dùng toán tử `in`:\\n\\n```python\\n>>> vals = eng2sp.values()\\n>>> 'uno' in vals\\nTrue\\n```\\n\\nNhư vậy, `values()` là phương thức được dùng trước phép kiểm tra/in kết quả [ea1fdb7aaae473ec200e4412fa125712].\", \"citations\": [\"ea1fdb7aaae473ec200e4412fa125712\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "answered",
+        "answer": "Sách dùng phương thức `values()` của dictionary để lấy tập giá trị, rồi mới dùng toán tử `in`:\n\n```python\n>>> vals = eng2sp.values()\n>>> 'uno' in vals\nTrue\n```\n\nNhư vậy, `values()` là phương thức được dùng trước phép kiểm tra/in kết quả [ea1fdb7aaae473ec200e4412fa125712].",
+        "citations": [
+          "ea1fdb7aaae473ec200e4412fa125712"
+        ]
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 680,
+        "completion_tokens": 158,
+        "total_tokens": 838,
+        "cost": 5.22536e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 640,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 5.22536e-05,
+          "upstream_inference_prompt_cost": 5.8016e-06,
+          "upstream_inference_completions_cost": 4.6452e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 107,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1469,
+        "completion_tokens": 257,
+        "total_tokens": 1726,
+        "cost": 0.0001586816,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 640,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001586816,
+          "upstream_inference_prompt_cost": 8.31236e-05,
+          "upstream_inference_completions_cost": 7.5558e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 73,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[2ca87670aa0a333e820e4c5c43c35d32 | starter\\data\\raw\\thinkpython2.pdf | page 126]\nger indices. Instead, you use the keys to look up the corresponding values:\n>>> eng2sp['two']\n'dos'\nThe key'two'always maps to the value'dos'so the order of the items doesn’t matter.\nIf the key isn’t in the dictionary, you get an exception:\n>>> eng2sp['four']\nKeyError:'four'\nThelenfunction works on dictionaries; it returns the number of key-value pairs:\n>>> len(eng2sp)\n3\nTheinoperator works on\n\n[ea1fdb7aaae473ec200e4412fa125712 | starter\\data\\raw\\thinkpython2.pdf | page 126]\nin the dictionary (appearing as a value is not good enough).\n>>>'one'in eng2sp\nTrue\n>>>'uno'in eng2sp\nFalse\nTo see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue\nTheinoperator uses different algorithms for lists and dictionaries. For lists, it searches the\n\n[cc053a99e662f933628d3998da6ac7e0 | starter\\data\\raw\\thinkpython2.pdf | page 125]\nThis line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+    "context_ids": [
+      "2ca87670aa0a333e820e4c5c43c35d32",
+      "ea1fdb7aaae473ec200e4412fa125712",
+      "cc053a99e662f933628d3998da6ac7e0"
+    ],
+    "search_count": 1,
+    "elapsed_ms": 5722.403399995528,
+    "reported_cost_usd": 0.0002109352,
+    "query_id": "test_q04",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Với list, toán tử + và toán tử * có tác dụng gì? Trong ví dụ của sách, [0] * 4 cho kết quả nào?",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "answered",
+    "answer": "Trong Python, với list:\n\n- Toán tử **+** dùng để **nối (concatenate)** hai list lại với nhau. Ví dụ: `a = [1, 2, 3]`, `b = [4, 5, 6]`, thì `a + b` cho `[1, 2, 3, 4, 5, 6]` [fdd6814315e19e373edd44f792c84c2d].\n- Toán tử **\\*** dùng để **lặp lại** một list với số lần cho trước [fdd6814315e19e373edd44f792c84c2d].\n\nTheo ví dụ trong sách, `[0] * 4` cho kết quả là `[0, 0, 0, 0]` — tức là phần tử `[0]` được lặp lại 4 lần [fdd6814315e19e373edd44f792c84c2d].",
+    "citations": [
+      "fdd6814315e19e373edd44f792c84c2d"
+    ],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681027-d7eZDaEUYDXVhfU1VLF3",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_b438eb774e98467cbc40070a",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"list concatenation + operator repetition * operator [0] * 4\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "list concatenation + operator repetition * operator [0] * 4",
+        "results": [
+          {
+            "id": "fdd6814315e19e373edd44f792c84c2d",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 113,
+            "text": "10.4 List operations\nThe+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]\n>>> [1, 2, 3] * 3\n[1, 2, 3, 1, 2, 3, 1, 2, 3]\nThe first example repeats[0]four times. The second example repeats the",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1414,
+              "language": "en",
+              "start_char": 1091,
+              "chapter_title": "Lists"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.8663795093267459,
+              "tfidf": 0.32283521803260873
+            }
+          },
+          {
+            "id": "19bd875bac7798ab2d340ed06f3ce811",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 113,
+            "text": "10.5 List slices\nThe slice operator also works on lists:",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line",
+              "end_char": 1498,
+              "language": "en",
+              "start_char": 1442,
+              "chapter_title": "Lists"
+            },
+            "score": 0.0315136476426799,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 5,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.604364734758,
+              "tfidf": 0.2660982006221816
+            }
+          },
+          {
+            "id": "2ddf4d83aac112f8597a15d7a598f240",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 112,
+            "text": "10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 622,
+              "language": "en",
+              "start_char": 130,
+              "chapter_title": "Lists"
+            },
+            "score": 0.030309988518943745,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 7,
+              "tfidf": 5
+            },
+            "retriever_scores": {
+              "dense": 0.5937058087412005,
+              "tfidf": 0.18234850158349436
+            }
+          }
+        ],
+        "context": "[fdd6814315e19e373edd44f792c84c2d | starter\\data\\raw\\thinkpython2.pdf | page 113]\n10.4 List operations\nThe+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]\n>>> [1, 2, 3] * 3\n[1, 2, 3, 1, 2, 3, 1, 2, 3]\nThe first example repeats[0]four times. The second example repeats the\n\n[19bd875bac7798ab2d340ed06f3ce811 | starter\\data\\raw\\thinkpython2.pdf | page 113]\n10.5 List slices\nThe slice operator also works on lists:\n\n[2ddf4d83aac112f8597a15d7a598f240 | starter\\data\\raw\\thinkpython2.pdf | page 112]\n10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,",
+        "context_ids": [
+          "fdd6814315e19e373edd44f792c84c2d",
+          "19bd875bac7798ab2d340ed06f3ce811",
+          "2ddf4d83aac112f8597a15d7a598f240"
+        ],
+        "elapsed_ms": 261.16629999887664,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681028-zmbWU6CYRF4JLfpPUb68",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_0ead6336620d49a2bc7e7b13",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"answered\", \"answer\": \"Trong Python, với list:\\n\\n- Toán tử **+** dùng để **nối (concatenate)** hai list lại với nhau. Ví dụ: `a = [1, 2, 3]`, `b = [4, 5, 6]`, thì `a + b` cho `[1, 2, 3, 4, 5, 6]` [fdd6814315e19e373edd44f792c84c2d].\\n- Toán tử **\\\\*** dùng để **lặp lại** một list với số lần cho trước [fdd6814315e19e373edd44f792c84c2d].\\n\\nTheo ví dụ trong sách, `[0] * 4` cho kết quả là `[0, 0, 0, 0]` — tức là phần tử `[0]` được lặp lại 4 lần [fdd6814315e19e373edd44f792c84c2d].\", \"citations\": [\"fdd6814315e19e373edd44f792c84c2d\"]}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "answered",
+        "answer": "Trong Python, với list:\n\n- Toán tử **+** dùng để **nối (concatenate)** hai list lại với nhau. Ví dụ: `a = [1, 2, 3]`, `b = [4, 5, 6]`, thì `a + b` cho `[1, 2, 3, 4, 5, 6]` [fdd6814315e19e373edd44f792c84c2d].\n- Toán tử **\\*** dùng để **lặp lại** một list với số lần cho trước [fdd6814315e19e373edd44f792c84c2d].\n\nTheo ví dụ trong sách, `[0] * 4` cho kết quả là `[0, 0, 0, 0]` — tức là phần tử `[0]` được lặp lại 4 lần [fdd6814315e19e373edd44f792c84c2d].",
+        "citations": [
+          "fdd6814315e19e373edd44f792c84c2d"
+        ]
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 675,
+        "completion_tokens": 60,
+        "total_tokens": 735,
+        "cost": 8.1048e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.1048e-05,
+          "upstream_inference_prompt_cost": 5.1048e-05,
+          "upstream_inference_completions_cost": 3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 9,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1362,
+        "completion_tokens": 316,
+        "total_tokens": 1678,
+        "cost": 0.000291488,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000291488,
+          "upstream_inference_prompt_cost": 0.000133488,
+          "upstream_inference_completions_cost": 0.000158
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[fdd6814315e19e373edd44f792c84c2d | starter\\data\\raw\\thinkpython2.pdf | page 113]\n10.4 List operations\nThe+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]\n>>> [1, 2, 3] * 3\n[1, 2, 3, 1, 2, 3, 1, 2, 3]\nThe first example repeats[0]four times. The second example repeats the\n\n[19bd875bac7798ab2d340ed06f3ce811 | starter\\data\\raw\\thinkpython2.pdf | page 113]\n10.5 List slices\nThe slice operator also works on lists:\n\n[2ddf4d83aac112f8597a15d7a598f240 | starter\\data\\raw\\thinkpython2.pdf | page 112]\n10.2 Lists are mutable\nThe syntax for accessing the elements of a list is the same as for accessing the characters\nof a string—the bracket operator. The expression inside the brackets specifies the index.\nRemember that the indices start at 0:\n>>> cheeses[0]\n'Cheddar'\nUnlike strings, lists are mutable. When the bracket operator appears on the left side of an\nassignment, it identifies the element of the list that will be assigned.\n>>> numbers = [42, 123]\n>>> numbers[1] = 5\n>>> numbers\n[42,",
+    "context_ids": [
+      "fdd6814315e19e373edd44f792c84c2d",
+      "19bd875bac7798ab2d340ed06f3ce811",
+      "2ddf4d83aac112f8597a15d7a598f240"
+    ],
+    "search_count": 1,
+    "elapsed_ms": 2416.9691000060993,
+    "reported_cost_usd": 0.000372536,
+    "query_id": "test_q05",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Theo chính các trang Think Python trong kho tài liệu, timeout HTTP bắt buộc khi gọi OpenRouter bằng urllib phải được đặt chính xác bao nhiêu giây? Tôi cần con số do tài liệu này quy định, không phải giá trị bạn tự đề xuất.",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng trong tài liệu để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681029-zhpqHCA3xYPM8vlgoSmd",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_934cfec5fb724965abe3626d",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"OpenRouter urllib timeout HTTP\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "OpenRouter urllib timeout HTTP",
+        "results": [
+          {
+            "id": "1659472f8635cbcdaf5e388b214c274b",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 110,
+            "text": "Solution:https: // thinkpython. com/ code/ cartalk3. py.",
+            "metadata": {
+              "chapter": 9,
+              "chunking": "paragraph_line",
+              "end_char": 2736,
+              "language": "en",
+              "start_char": 2680,
+              "chapter_title": "Case study: word play"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.3365140061531666
+            }
+          },
+          {
+            "id": "7ecbb310b8eb7be5cdcf7de5593022ab",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 124,
+            "text": "102 Chapter 10. Lists\nthinkpython. com/ code/ interlock. py. Credit: This exercise is inspired by an example at\nhttp: // puzzlers. org.\n1. Write a program that finds all pairs of words that interlock. Hint: don’t enumerate all pairs!\n2. Can you find any words that are three-way interlocked; that is, every third letter forms a\nword, starting from the first, second or third?",
+            "metadata": {
+              "chapter": 10,
+              "chunking": "paragraph_line",
+              "end_char": 375,
+              "language": "en",
+              "start_char": 0,
+              "chapter_title": "Lists"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "tfidf": 0.14306631623111246
+            }
+          },
+          {
+            "id": "0f1307b15ec6c4b5ce9167e20d3f3b86",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 103,
+            "text": "https: // thinkpython. com/ code/ rotate. py.",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 522,
+              "language": "en",
+              "start_char": 477,
+              "chapter_title": "Strings"
+            },
+            "score": 0.016129032258064516,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2
+            },
+            "retriever_scores": {
+              "dense": 0.2852405309677124
+            }
+          }
+        ],
+        "context": "[1659472f8635cbcdaf5e388b214c274b | starter\\data\\raw\\thinkpython2.pdf | page 110]\nSolution:https: // thinkpython. com/ code/ cartalk3. py.\n\n[7ecbb310b8eb7be5cdcf7de5593022ab | starter\\data\\raw\\thinkpython2.pdf | page 124]\n102 Chapter 10. Lists\nthinkpython. com/ code/ interlock. py. Credit: This exercise is inspired by an example at\nhttp: // puzzlers. org.\n1. Write a program that finds all pairs of words that interlock. Hint: don’t enumerate all pairs!\n2. Can you find any words that are three-way interlocked; that is, every third letter forms a\nword, starting from the first, second or third?\n\n[0f1307b15ec6c4b5ce9167e20d3f3b86 | starter\\data\\raw\\thinkpython2.pdf | page 103]\nhttps: // thinkpython. com/ code/ rotate. py.",
+        "context_ids": [
+          "1659472f8635cbcdaf5e388b214c274b",
+          "7ecbb310b8eb7be5cdcf7de5593022ab",
+          "0f1307b15ec6c4b5ce9167e20d3f3b86"
+        ],
+        "elapsed_ms": 688.3484999998473,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681031-ZHbTaCs0Qq02vcw8MfRW",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_a228a200c3ad48b29b65e8ed",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"urllib.request.urlopen timeout parameter HTTP client\"}"
+            }
+          },
+          {
+            "type": "function",
+            "index": 1,
+            "id": "call_7e36e7b3fc364e5489171dd6",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"OpenRouter API key request network sockets\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "format_retry",
+        "attempt": 1,
+        "reason": "Nhận được 2 tool call; yêu cầu đúng một tool call trong mỗi lượt."
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681032-4L9xCDia6h8D12tAwdBD",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_365a81dd8e244fb99a2f8ca6",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"urllib urlopen timeout HTTP request Python\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "urllib urlopen timeout HTTP request Python",
+        "results": [
+          {
+            "id": "18edaf2d96821ff802e014131e5eaed9",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 138,
+            "text": "work with tuples and other sequences; Python starts by comparing",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 931,
+              "language": "en",
+              "start_char": 867,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "tfidf": 0.1682930879463488
+            }
+          },
+          {
+            "id": "d4670ded2dd9bf5d9b227a7bae826889",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 141,
+            "text": "Each time through the loop, Python selects the next tuple in the list and assigns the ele-\nments toletterandnumber. The output of this loop is:\n0 a\n1 b\n2 c\nIf you combinezip,forand tuple assignment, you get a useful idiom for traversing two\n(or more) sequences at the same time. For example,has_matchtakes two sequences,t1\nandt2, and returnsTrueif there is an indexisuch thatt1[i] == t2[i]:\ndef",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 1293,
+              "language": "en",
+              "start_char": 899,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.36598527431488037
+            }
+          },
+          {
+            "id": "1659472f8635cbcdaf5e388b214c274b",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 110,
+            "text": "Solution:https: // thinkpython. com/ code/ cartalk3. py.",
+            "metadata": {
+              "chapter": 9,
+              "chunking": "paragraph_line",
+              "end_char": 2736,
+              "language": "en",
+              "start_char": 2680,
+              "chapter_title": "Case study: word play"
+            },
+            "score": 0.016129032258064516,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2
+            },
+            "retriever_scores": {
+              "dense": 0.33226777113282013
+            }
+          }
+        ],
+        "context": "[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[d4670ded2dd9bf5d9b227a7bae826889 | starter\\data\\raw\\thinkpython2.pdf | page 141]\nEach time through the loop, Python selects the next tuple in the list and assigns the ele-\nments toletterandnumber. The output of this loop is:\n0 a\n1 b\n2 c\nIf you combinezip,forand tuple assignment, you get a useful idiom for traversing two\n(or more) sequences at the same time. For example,has_matchtakes two sequences,t1\nandt2, and returnsTrueif there is an indexisuch thatt1[i] == t2[i]:\ndef\n\n[1659472f8635cbcdaf5e388b214c274b | starter\\data\\raw\\thinkpython2.pdf | page 110]\nSolution:https: // thinkpython. com/ code/ cartalk3. py.\n\n[7ecbb310b8eb7be5cdcf7de5593022ab | starter\\data\\raw\\thinkpython2.pdf | page 124]\n102 Chapter 10. Lists\nthinkpython. com/ code/ interlock. py. Credit: This exercise is inspired by an example at\nhttp: // puzzlers. org.\n1. Write a program that finds all pairs of words that interlock. Hint: don’t enumerate all pairs!\n2. Can you find any words that are three-way interlocked; that is, every third letter forms a\nword, starting from the first, second or third?\n\n[0f1307b15ec6c4b5ce9167e20d3f3b86 | starter\\data\\raw\\thinkpython2.pdf | page 103]\nhttps: // thinkpython. com/ code/ rotate. py.",
+        "context_ids": [
+          "18edaf2d96821ff802e014131e5eaed9",
+          "d4670ded2dd9bf5d9b227a7bae826889",
+          "1659472f8635cbcdaf5e388b214c274b",
+          "7ecbb310b8eb7be5cdcf7de5593022ab",
+          "0f1307b15ec6c4b5ce9167e20d3f3b86"
+        ],
+        "elapsed_ms": 172.67160000483273,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681033-IPQYcjr38X7HuV6Dh1JN",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_b0c2f1dff53b4593ab09b44d",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"OpenRouter timeout urllib.request.urlopen seconds\"}"
+            }
+          },
+          {
+            "type": "function",
+            "index": 1,
+            "id": "call_7eaa0c62146a4ad586590e52",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"\\\"OpenRouter\\\" API call Python timeout\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "format_retry",
+        "attempt": 2,
+        "reason": "Nhận được 2 tool call; yêu cầu đúng một tool call trong mỗi lượt."
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681033-ke0cEa6KUylBJIJIpIiD",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_edef229243e347a7a8bb904e",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"OpenRouter timeout urllib.request.urlopen seconds\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "OpenRouter timeout urllib.request.urlopen seconds",
+        "results": [
+          {
+            "id": "09800afa03fbb2fdd0585f709c4ba8ed",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 145,
+            "text": "12.10 Exercises\nExercise 12.1.Write a function calledmost_frequentthat takes a string and prints the let-\nters in decreasing order of frequency. Find text samples from several different languages and see\nhow letter frequency varies between languages. Compare your results with the tables athttp:\n// en. wikipedia. org/ wiki/ Letter_ frequencies. Solution:https: // thinkpython.\ncom/ code/ most_ frequent. py.\nExercise 12.2.More anagrams!",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line",
+              "end_char": 1020,
+              "language": "en",
+              "start_char": 583,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.31258823350597875
+            }
+          },
+          {
+            "id": "3b311106c4a8a3b51ee657750afc0f8a",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 97,
+            "text": "8.7 Looping and counting\nThe following program counts the number of times the letteraappears in a string:\nword ='banana'\ncount = 0\nfor letter in word:\nif letter =='a':\ncount = count + 1\nprint(count)\nThis program demonstrates another pattern of computation called acounter. The variable\ncountis initialized to 0 and then incremented each time anais found. When the loop exits,\ncountcontains the result—the total number ofa’s.",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 1185,
+              "language": "en",
+              "start_char": 761,
+              "chapter_title": "Strings"
+            },
+            "score": 0.016129032258064516,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 2
+            },
+            "retriever_scores": {
+              "dense": 0.31022478999047276
+            }
+          },
+          {
+            "id": "a41f3bb6b7c607d9a52edf9d4a404ab4",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 105,
+            "text": "The file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+            "metadata": {
+              "chapter": 9,
+              "chunking": "paragraph_line",
+              "end_char": 1827,
+              "language": "en",
+              "start_char": 1693,
+              "chapter_title": "Case study: word play"
+            },
+            "score": 0.015873015873015872,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 3
+            },
+            "retriever_scores": {
+              "dense": 0.30547943711281045
+            }
+          }
+        ],
+        "context": "[09800afa03fbb2fdd0585f709c4ba8ed | starter\\data\\raw\\thinkpython2.pdf | page 145]\n12.10 Exercises\nExercise 12.1.Write a function calledmost_frequentthat takes a string and prints the let-\nters in decreasing order of frequency. Find text samples from several different languages and see\nhow letter frequency varies between languages. Compare your results with the tables athttp:\n// en. wikipedia. org/ wiki/ Letter_ frequencies. Solution:https: // thinkpython.\ncom/ code/ most_ frequent. py.\nExercise 12.2.More anagrams!\n\n[3b311106c4a8a3b51ee657750afc0f8a | starter\\data\\raw\\thinkpython2.pdf | page 97]\n8.7 Looping and counting\nThe following program counts the number of times the letteraappears in a string:\nword ='banana'\ncount = 0\nfor letter in word:\nif letter =='a':\ncount = count + 1\nprint(count)\nThis program demonstrates another pattern of computation called acounter. The variable\ncountis initialized to 0 and then incremented each time anais found. When the loop exits,\ncountcontains the result—the total number ofa’s.\n\n[a41f3bb6b7c607d9a52edf9d4a404ab4 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nThe file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'\n\n[18edaf2d96821ff802e014131e5eaed9 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nwork with tuples and other sequences; Python starts by comparing\n\n[1659472f8635cbcdaf5e388b214c274b | starter\\data\\raw\\thinkpython2.pdf | page 110]\nSolution:https: // thinkpython. com/ code/ cartalk3. py.",
+        "context_ids": [
+          "09800afa03fbb2fdd0585f709c4ba8ed",
+          "3b311106c4a8a3b51ee657750afc0f8a",
+          "a41f3bb6b7c607d9a52edf9d4a404ab4",
+          "18edaf2d96821ff802e014131e5eaed9",
+          "1659472f8635cbcdaf5e388b214c274b"
+        ],
+        "elapsed_ms": 270.45889999862993,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681034-NgZK3BNC2x7oELaB5HcK",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_30b3bf89d75b4931bbf0aa94",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"HTTP timeout socket timeout urllib OpenRouter API key request\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "HTTP timeout socket timeout urllib OpenRouter API key request",
+        "results": [
+          {
+            "id": "d3877b4c3448331718c35be0377df10d",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 142,
+            "text": "use it in aforloop like this:\n>>> for key, value in d.items():\n... print(key, value)\n...\nc 2\na 0\nb 1",
+            "metadata": {
+              "chapter": 12,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 456,
+              "language": "en",
+              "start_char": 356,
+              "chapter_title": "Tuples"
+            },
+            "score": 0.031054405392392875,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 7,
+              "tfidf": 2
+            },
+            "retriever_scores": {
+              "dense": 0.21150927245616913,
+              "tfidf": 0.26770282024019926
+            }
+          },
+          {
+            "id": "412d0321c79b9750049765afeec019da",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 130,
+            "text": "use these integers, called hash values, to store and look up key-value pairs.\nThis system works fine if the keys are immutable. But if the keys are mutable, like lists,\nbad things happen. For example, when you create a key-value pair, Python hashes the key\nand stores it in the corresponding location. If you modify the key and then hash it again, it\nwould go to a different location. In that case you might have two entries for the same key,",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line",
+              "end_char": 1874,
+              "language": "en",
+              "start_char": 1432,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.030117753623188408,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 9,
+              "tfidf": 4
+            },
+            "retriever_scores": {
+              "dense": 0.2059081372077387,
+              "tfidf": 0.24246784691180986
+            }
+          },
+          {
+            "id": "1659472f8635cbcdaf5e388b214c274b",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 110,
+            "text": "Solution:https: // thinkpython. com/ code/ cartalk3. py.",
+            "metadata": {
+              "chapter": 9,
+              "chunking": "paragraph_line",
+              "end_char": 2736,
+              "language": "en",
+              "start_char": 2680,
+              "chapter_title": "Case study: word play"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.32456056250812315
+            }
+          }
+        ],
+        "context": "[d3877b4c3448331718c35be0377df10d | starter\\data\\raw\\thinkpython2.pdf | page 142]\nuse it in aforloop like this:\n>>> for key, value in d.items():\n... print(key, value)\n...\nc 2\na 0\nb 1\n\n[412d0321c79b9750049765afeec019da | starter\\data\\raw\\thinkpython2.pdf | page 130]\nuse these integers, called hash values, to store and look up key-value pairs.\nThis system works fine if the keys are immutable. But if the keys are mutable, like lists,\nbad things happen. For example, when you create a key-value pair, Python hashes the key\nand stores it in the corresponding location. If you modify the key and then hash it again, it\nwould go to a different location. In that case you might have two entries for the same key,\n\n[1659472f8635cbcdaf5e388b214c274b | starter\\data\\raw\\thinkpython2.pdf | page 110]\nSolution:https: // thinkpython. com/ code/ cartalk3. py.\n\n[09800afa03fbb2fdd0585f709c4ba8ed | starter\\data\\raw\\thinkpython2.pdf | page 145]\n12.10 Exercises\nExercise 12.1.Write a function calledmost_frequentthat takes a string and prints the let-\nters in decreasing order of frequency. Find text samples from several different languages and see\nhow letter frequency varies between languages. Compare your results with the tables athttp:\n// en. wikipedia. org/ wiki/ Letter_ frequencies. Solution:https: // thinkpython.\ncom/ code/ most_ frequent. py.\nExercise 12.2.More anagrams!\n\n[a41f3bb6b7c607d9a52edf9d4a404ab4 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nThe file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+        "context_ids": [
+          "d3877b4c3448331718c35be0377df10d",
+          "412d0321c79b9750049765afeec019da",
+          "1659472f8635cbcdaf5e388b214c274b",
+          "09800afa03fbb2fdd0585f709c4ba8ed",
+          "a41f3bb6b7c607d9a52edf9d4a404ab4"
+        ],
+        "elapsed_ms": 196.11829999485053,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681035-yYkikiJqR1FA92fpqAnB",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_355f8d7de3334690b62b52bb",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"abstain\", \"answer\": \"Không xác định được con số này từ kho tài liệu. Các trang Think Python trong kho không chứa quy định về việc gọi OpenRouter bằng `urllib`, cũng không nêu thời gian timeout HTTP bắt buộc cho việc đó. Vì vậy, không có căn cứ để đưa ra một con số cụ thể theo tài liệu Think Python.\", \"citations\": []}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "abstain",
+        "answer": "Không xác định được con số này từ kho tài liệu. Các trang Think Python trong kho không chứa quy định về việc gọi OpenRouter bằng `urllib`, cũng không nêu thời gian timeout HTTP bắt buộc cho việc đó. Vì vậy, không có căn cứ để đưa ra một con số cụ thể theo tài liệu Think Python.",
+        "citations": []
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 708,
+        "completion_tokens": 104,
+        "total_tokens": 812,
+        "cost": 0.000107008,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000107008,
+          "upstream_inference_prompt_cost": 5.5008e-05,
+          "upstream_inference_completions_cost": 5.2e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1274,
+        "completion_tokens": 105,
+        "total_tokens": 1379,
+        "cost": 0.000175428,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000175428,
+          "upstream_inference_prompt_cost": 0.000122928,
+          "upstream_inference_completions_cost": 5.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1533,
+        "completion_tokens": 45,
+        "total_tokens": 1578,
+        "cost": 8.6652e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 8.6652e-05,
+          "upstream_inference_prompt_cost": 6.4152e-05,
+          "upstream_inference_completions_cost": 2.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1462,
+        "completion_tokens": 89,
+        "total_tokens": 1551,
+        "cost": 0.000160036,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000160036,
+          "upstream_inference_prompt_cost": 0.000115536,
+          "upstream_inference_completions_cost": 4.45e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 14,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1705,
+        "completion_tokens": 46,
+        "total_tokens": 1751,
+        "cost": 7.784e-05,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 7.784e-05,
+          "upstream_inference_prompt_cost": 5.484e-05,
+          "upstream_inference_completions_cost": 2.3e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1512,
+        "completion_tokens": 85,
+        "total_tokens": 1597,
+        "cost": 0.000164036,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000164036,
+          "upstream_inference_prompt_cost": 0.000121536,
+          "upstream_inference_completions_cost": 4.25e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 42,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1499,
+        "completion_tokens": 201,
+        "total_tokens": 1700,
+        "cost": 0.000250428,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 256,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000250428,
+          "upstream_inference_prompt_cost": 0.000149928,
+          "upstream_inference_completions_cost": 0.0001005
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[d3877b4c3448331718c35be0377df10d | starter\\data\\raw\\thinkpython2.pdf | page 142]\nuse it in aforloop like this:\n>>> for key, value in d.items():\n... print(key, value)\n...\nc 2\na 0\nb 1\n\n[412d0321c79b9750049765afeec019da | starter\\data\\raw\\thinkpython2.pdf | page 130]\nuse these integers, called hash values, to store and look up key-value pairs.\nThis system works fine if the keys are immutable. But if the keys are mutable, like lists,\nbad things happen. For example, when you create a key-value pair, Python hashes the key\nand stores it in the corresponding location. If you modify the key and then hash it again, it\nwould go to a different location. In that case you might have two entries for the same key,\n\n[1659472f8635cbcdaf5e388b214c274b | starter\\data\\raw\\thinkpython2.pdf | page 110]\nSolution:https: // thinkpython. com/ code/ cartalk3. py.\n\n[09800afa03fbb2fdd0585f709c4ba8ed | starter\\data\\raw\\thinkpython2.pdf | page 145]\n12.10 Exercises\nExercise 12.1.Write a function calledmost_frequentthat takes a string and prints the let-\nters in decreasing order of frequency. Find text samples from several different languages and see\nhow letter frequency varies between languages. Compare your results with the tables athttp:\n// en. wikipedia. org/ wiki/ Letter_ frequencies. Solution:https: // thinkpython.\ncom/ code/ most_ frequent. py.\nExercise 12.2.More anagrams!\n\n[a41f3bb6b7c607d9a52edf9d4a404ab4 | starter\\data\\raw\\thinkpython2.pdf | page 105]\nThe file object keeps track of where it is in the file, so if you callreadlineagain, you get\nthe next word:\n>>> fin.readline()\n'aah\\n'",
+    "context_ids": [
+      "d3877b4c3448331718c35be0377df10d",
+      "412d0321c79b9750049765afeec019da",
+      "1659472f8635cbcdaf5e388b214c274b",
+      "09800afa03fbb2fdd0585f709c4ba8ed",
+      "a41f3bb6b7c607d9a52edf9d4a404ab4"
+    ],
+    "search_count": 4,
+    "elapsed_ms": 7811.154100003478,
+    "reported_cost_usd": 0.001021428,
+    "query_id": "test_u01",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  },
+  {
+    "question": "Lần chạy histogram('parrot') trên máy cá nhân của tôi hôm nay mất chính xác bao nhiêu mili giây? Tôi chưa cung cấp log hoặc phép đo. Cần thời gian thực đo của lần chạy đó, không phải ước lượng.",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng trong tài liệu để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "model",
+        "response_id": "gen-1794681037-4BbJcRIm5mA6NBxGyya9",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_00_jfz2q9b6r7aepuz12jxmg5os",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"histogram('parrot') runtime milliseconds measurement\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "histogram('parrot') runtime milliseconds measurement",
+        "results": [
+          {
+            "id": "eb6de78ec14e4e50378514e3d03d8aa0",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 129,
+            "text": "histogram('parrot')",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 495,
+              "language": "en",
+              "start_char": 476,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.03278688524590164,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1,
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "dense": 0.5671273807959197,
+              "tfidf": 0.7867890012223859
+            }
+          },
+          {
+            "id": "d3f1db77682411be501d0bff70424c22",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 127,
+            "text": "The histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line",
+              "end_char": 2139,
+              "language": "en",
+              "start_char": 1794,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.03055037313432836,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 7,
+              "tfidf": 4
+            },
+            "retriever_scores": {
+              "dense": 0.3331829508056021,
+              "tfidf": 0.14765448247838814
+            }
+          },
+          {
+            "id": "cbef56089c431525edf5f04216ef822e",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 128,
+            "text": "11.3 Looping and dictionaries\nIf you use a dictionary in aforstatement, it traverses the keys of the dictionary. For exam-\nple,print_histprints each key and the corresponding value:\ndef print_hist(h):\nfor c in h:\nprint(c, h[c])\nHere’s what the output looks like:\n>>> h = histogram('parrot')\n>>> print_hist(h)\na 1\np 1\nr 2\nt 1\no 1\nAgain, the keys are in no particular order. To traverse",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 538,
+              "language": "en",
+              "start_char": 154,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.030536130536130537,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 6,
+              "tfidf": 5
+            },
+            "retriever_scores": {
+              "dense": 0.33573879812591123,
+              "tfidf": 0.1401422735388618
+            }
+          }
+        ],
+        "context": "[eb6de78ec14e4e50378514e3d03d8aa0 | starter\\data\\raw\\thinkpython2.pdf | page 129]\nhistogram('parrot')\n\n[d3f1db77682411be501d0bff70424c22 | starter\\data\\raw\\thinkpython2.pdf | page 127]\nThe histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)\n\n[cbef56089c431525edf5f04216ef822e | starter\\data\\raw\\thinkpython2.pdf | page 128]\n11.3 Looping and dictionaries\nIf you use a dictionary in aforstatement, it traverses the keys of the dictionary. For exam-\nple,print_histprints each key and the corresponding value:\ndef print_hist(h):\nfor c in h:\nprint(c, h[c])\nHere’s what the output looks like:\n>>> h = histogram('parrot')\n>>> print_hist(h)\na 1\np 1\nr 2\nt 1\no 1\nAgain, the keys are in no particular order. To traverse",
+        "context_ids": [
+          "eb6de78ec14e4e50378514e3d03d8aa0",
+          "d3f1db77682411be501d0bff70424c22",
+          "cbef56089c431525edf5f04216ef822e"
+        ],
+        "elapsed_ms": 388.4829000016907,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681040-HPVrVdgLCJ20czkSC3iA",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-36d1f40f-a7bf-45c1-949e-ece53ecc4586",
+            "function": {
+              "name": "search",
+              "arguments": "{\"query\": \"measure execution time milliseconds computer-specific benchmark histogram\"}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "search",
+        "query": "measure execution time milliseconds computer-specific benchmark histogram",
+        "results": [
+          {
+            "id": "1c5763b0c6f4cbe934710658f8590b7d",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 127,
+            "text": "better than others. For example, an advantage of the dictionary implementation is that we\ndon’t have to know ahead of time which letters appear in the string and we only have to\nmake room for the letters that do appear.\nHere is what the code might look like:\ndef histogram(s):\nd = dict()\nfor c in s:\nif c not in d:\nd[c] = 1\nelse:\nd[c] += 1\nreturn d\nThe name of the function ishistogram, which is a statistical term for a collection of counters\n(or frequencies).",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line",
+              "end_char": 1367,
+              "language": "en",
+              "start_char": 906,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.029437229437229435,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 10,
+              "tfidf": 6
+            },
+            "retriever_scores": {
+              "dense": 0.3342258630587114,
+              "tfidf": 0.07533088198720783
+            }
+          },
+          {
+            "id": "3b311106c4a8a3b51ee657750afc0f8a",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 97,
+            "text": "8.7 Looping and counting\nThe following program counts the number of times the letteraappears in a string:\nword ='banana'\ncount = 0\nfor letter in word:\nif letter =='a':\ncount = count + 1\nprint(count)\nThis program demonstrates another pattern of computation called acounter. The variable\ncountis initialized to 0 and then incremented each time anais found. When the loop exits,\ncountcontains the result—the total number ofa’s.",
+            "metadata": {
+              "chapter": 8,
+              "chunking": "paragraph_line",
+              "end_char": 1185,
+              "language": "en",
+              "start_char": 761,
+              "chapter_title": "Strings"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "dense": 1
+            },
+            "retriever_scores": {
+              "dense": 0.43996495724142415
+            }
+          },
+          {
+            "id": "eb6de78ec14e4e50378514e3d03d8aa0",
+            "source_id": "thinkpython2-v2.4.1",
+            "source": "starter\\data\\raw\\thinkpython2.pdf",
+            "page": 129,
+            "text": "histogram('parrot')",
+            "metadata": {
+              "chapter": 11,
+              "chunking": "paragraph_line+token_guard",
+              "end_char": 495,
+              "language": "en",
+              "start_char": 476,
+              "chapter_title": "Dictionaries"
+            },
+            "score": 0.01639344262295082,
+            "strategy": "hybrid",
+            "retriever_ranks": {
+              "tfidf": 1
+            },
+            "retriever_scores": {
+              "tfidf": 0.2769875656590841
+            }
+          }
+        ],
+        "context": "[1c5763b0c6f4cbe934710658f8590b7d | starter\\data\\raw\\thinkpython2.pdf | page 127]\nbetter than others. For example, an advantage of the dictionary implementation is that we\ndon’t have to know ahead of time which letters appear in the string and we only have to\nmake room for the letters that do appear.\nHere is what the code might look like:\ndef histogram(s):\nd = dict()\nfor c in s:\nif c not in d:\nd[c] = 1\nelse:\nd[c] += 1\nreturn d\nThe name of the function ishistogram, which is a statistical term for a collection of counters\n(or frequencies).\n\n[3b311106c4a8a3b51ee657750afc0f8a | starter\\data\\raw\\thinkpython2.pdf | page 97]\n8.7 Looping and counting\nThe following program counts the number of times the letteraappears in a string:\nword ='banana'\ncount = 0\nfor letter in word:\nif letter =='a':\ncount = count + 1\nprint(count)\nThis program demonstrates another pattern of computation called acounter. The variable\ncountis initialized to 0 and then incremented each time anais found. When the loop exits,\ncountcontains the result—the total number ofa’s.\n\n[eb6de78ec14e4e50378514e3d03d8aa0 | starter\\data\\raw\\thinkpython2.pdf | page 129]\nhistogram('parrot')\n\n[d3f1db77682411be501d0bff70424c22 | starter\\data\\raw\\thinkpython2.pdf | page 127]\nThe histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)",
+        "context_ids": [
+          "1c5763b0c6f4cbe934710658f8590b7d",
+          "3b311106c4a8a3b51ee657750afc0f8a",
+          "eb6de78ec14e4e50378514e3d03d8aa0",
+          "d3f1db77682411be501d0bff70424c22"
+        ],
+        "elapsed_ms": 192.39009999728296,
+        "top_k": 3
+      },
+      {
+        "event": "model",
+        "response_id": "gen-1794681042-oDA0wcwuHFbzZmtgHKmE",
+        "returned_model": "deepseek/deepseek-v4.1-flash-1017",
+        "finish_reason": "tool_calls",
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call-fa3a5dc8-1df6-47f7-983e-6eb835d254c5",
+            "function": {
+              "name": "finish",
+              "arguments": "{\"status\": \"abstain\", \"answer\": \"Không thể xác định được. Tài liệu Think Python chỉ minh họa hàm `histogram` và kết quả của `histogram('parrot')`, không ghi lại thời gian chạy trên máy cá nhân của bạn. Vì bạn chưa cung cấp log hoặc phép đo, không có dữ liệu nào để suy ra thời gian thực tế tính bằng mili giây của lần chạy đó; mọi con số sẽ chỉ là ước lượng, không đáp ứng yêu cầu.\", \"citations\": []}"
+            }
+          }
+        ]
+      },
+      {
+        "event": "finish",
+        "status": "abstain",
+        "answer": "Không thể xác định được. Tài liệu Think Python chỉ minh họa hàm `histogram` và kết quả của `histogram('parrot')`, không ghi lại thời gian chạy trên máy cá nhân của bạn. Vì bạn chưa cung cấp log hoặc phép đo, không có dữ liệu nào để suy ra thời gian thực tế tính bằng mili giây của lần chạy đó; mọi con số sẽ chỉ là ước lượng, không đáp ứng yêu cầu.",
+        "citations": []
+      }
+    ],
+    "usage": [
+      {
+        "prompt_tokens": 713,
+        "completion_tokens": 87,
+        "total_tokens": 800,
+        "cost": 0.000175065,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000175065,
+          "upstream_inference_prompt_cost": 0.000117645,
+          "upstream_inference_completions_cost": 5.742e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1357,
+        "completion_tokens": 114,
+        "total_tokens": 1471,
+        "cost": 0.00014024388,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00014024388,
+          "upstream_inference_prompt_cost": 8.996988e-05,
+          "upstream_inference_completions_cost": 5.0274e-05
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 69,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 1576,
+        "completion_tokens": 235,
+        "total_tokens": 1811,
+        "cost": 0.00022579788,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 768,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00022579788,
+          "upstream_inference_prompt_cost": 0.00012216288,
+          "upstream_inference_completions_cost": 0.000103635
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "budget_chars": 1600,
+    "max_searches": 4,
+    "context": "[1c5763b0c6f4cbe934710658f8590b7d | starter\\data\\raw\\thinkpython2.pdf | page 127]\nbetter than others. For example, an advantage of the dictionary implementation is that we\ndon’t have to know ahead of time which letters appear in the string and we only have to\nmake room for the letters that do appear.\nHere is what the code might look like:\ndef histogram(s):\nd = dict()\nfor c in s:\nif c not in d:\nd[c] = 1\nelse:\nd[c] += 1\nreturn d\nThe name of the function ishistogram, which is a statistical term for a collection of counters\n(or frequencies).\n\n[3b311106c4a8a3b51ee657750afc0f8a | starter\\data\\raw\\thinkpython2.pdf | page 97]\n8.7 Looping and counting\nThe following program counts the number of times the letteraappears in a string:\nword ='banana'\ncount = 0\nfor letter in word:\nif letter =='a':\ncount = count + 1\nprint(count)\nThis program demonstrates another pattern of computation called acounter. The variable\ncountis initialized to 0 and then incremented each time anais found. When the loop exits,\ncountcontains the result—the total number ofa’s.\n\n[eb6de78ec14e4e50378514e3d03d8aa0 | starter\\data\\raw\\thinkpython2.pdf | page 129]\nhistogram('parrot')\n\n[d3f1db77682411be501d0bff70424c22 | starter\\data\\raw\\thinkpython2.pdf | page 127]\nThe histogram indicates that the letters'a'and'b'appear once;'o'appears twice, and\nso on.\nDictionaries have a method calledgetthat takes a key and a default value. If the key\nappears in the dictionary,getreturns the corresponding value; otherwise it returns the\ndefault value. For example:\n>>> h = histogram('a')\n>>> h\n{'a': 1}\n>>> h.get('a', 0)",
+    "context_ids": [
+      "1c5763b0c6f4cbe934710658f8590b7d",
+      "3b311106c4a8a3b51ee657750afc0f8a",
+      "eb6de78ec14e4e50378514e3d03d8aa0",
+      "d3f1db77682411be501d0bff70424c22"
+    ],
+    "search_count": 2,
+    "elapsed_ms": 7336.809000000358,
+    "reported_cost_usd": 0.00054110676,
+    "query_id": "test_u02",
+    "split": "test",
+    "retrieval_method": "hybrid"
+  }
+]

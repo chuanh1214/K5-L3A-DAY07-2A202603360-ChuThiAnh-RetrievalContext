@@ -1,0 +1,8 @@
+{
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "method": "tfidf",
+  "split": "test",
+  "budget_chars": 1600,
+  "max_searches": 4,
+  "questions_file": "data\\day7_test_questions.json"
+}

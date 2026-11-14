@@ -1,0 +1,6 @@
+# PDF parsing, local multilingual embeddings and persistent pgvector retrieval.
+psycopg[binary]==3.3.8
+pypdf>=5,<7
+python-dotenv>=1,<2
+sentence-transformers==6.3.0
+pgvector==0.5.1

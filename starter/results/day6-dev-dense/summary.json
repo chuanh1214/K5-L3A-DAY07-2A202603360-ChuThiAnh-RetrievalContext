@@ -1,0 +1,20 @@
+{
+  "strategy": "dense",
+  "split": "dev",
+  "n": 15,
+  "hit1": 6,
+  "hit3": 7,
+  "context_hit": 6,
+  "avg_context_chars": 619.7333333333333,
+  "median_ms": 94.6323999996821,
+  "model_load_seconds": 17.356692399996973,
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "dimensions": 384,
+  "collection": "thinkpython2_e8412522c5d43b8e",
+  "day6_strategy": "B",
+  "top_k": 3,
+  "budget_chars": 800,
+  "filter_policy": "none",
+  "service_cost_usd": 0
+}

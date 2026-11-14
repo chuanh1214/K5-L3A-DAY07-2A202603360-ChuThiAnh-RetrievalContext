@@ -1,0 +1,13 @@
+{
+  "split": "dev",
+  "method": "tfidf",
+  "n": 17,
+  "statuses": {
+    "answered": 15,
+    "abstain": 2
+  },
+  "total_searches": 24,
+  "sum_known_cost_usd": 0.007818576658,
+  "queries_with_unknown_cost": 0,
+  "note": "Chưa chấm độ đúng, citation hoặc abstention."
+}

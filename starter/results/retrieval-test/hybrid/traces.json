@@ -1,0 +1,526 @@
+[
+  {
+    "query_id": "test_q01",
+    "split": "test",
+    "question": "Hàm len() trả về đại lượng gì khi đối số là một chuỗi? Với fruit = 'banana', sách cho kết quả len(fruit) bằng bao nhiêu?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 1600,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 94,
+        "evidence": "lenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6"
+      }
+    ],
+    "results": [
+      {
+        "id": "14910f352ec10d9fdcdcc227febdee52",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 93,
+        "text": "fruit[i]\n'a'\n>>> fruit[i+1]\n'n'",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1185,
+          "language": "en",
+          "start_char": 1154,
+          "chapter_title": "Strings"
+        },
+        "score": 0.03252247488101534,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "dense": 0.6033894003447714,
+          "tfidf": 0.4821350936856355
+        },
+        "hit": false
+      },
+      {
+        "id": "05d9cb659795b20d5c946afb2a0b0216",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 96,
+        "text": "74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 398,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Strings"
+        },
+        "score": 0.032018442622950824,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 4
+        },
+        "retriever_scores": {
+          "dense": 0.6116761151455677,
+          "tfidf": 0.26487854149483947
+        },
+        "hit": false
+      },
+      {
+        "id": "5f7e7d7b3f4b11ac0d5c5ae638959407",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 94,
+        "text": "8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,",
+        "metadata": {
+          "chapter": 8,
+          "chunking": "paragraph_line",
+          "end_char": 631,
+          "language": "en",
+          "start_char": 157,
+          "chapter_title": "Strings"
+        },
+        "score": 0.03200204813108039,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5882040157074951,
+          "tfidf": 0.4637594611529653
+        },
+        "hit": true
+      }
+    ],
+    "context": "[14910f352ec10d9fdcdcc227febdee52 | starter\\data\\raw\\thinkpython2.pdf | page 93]\nfruit[i]\n'a'\n>>> fruit[i+1]\n'n'\n\n[05d9cb659795b20d5c946afb2a0b0216 | starter\\data\\raw\\thinkpython2.pdf | page 96]\n74 Chapter 8. Strings\n'ban'\n>>> fruit[3:]\n'ana'\nIf the first index is greater than or equal to the second the result is anempty string, repre-\nsented by two quotation marks:\n>>> fruit ='banana'\n>>> fruit[3:3]\n''\nAn empty string contains no characters and has length 0, but other than that, it is the same\nas any other string.\nContinuing this example, what do you thinkfruit[:]means? Try it and see.\n\n[5f7e7d7b3f4b11ac0d5c5ae638959407 | starter\\data\\raw\\thinkpython2.pdf | page 94]\n8.2len\nlenis a built-in function that returns the number of characters in a string:\n>>> fruit ='banana'\n>>> len(fruit)\n6\nTo get the last letter of a string, you might be tempted to try something like this:\n>>> length = len(fruit)\n>>> last = fruit[length]\nIndexError: string index out of range\nThe reason for theIndexErroris that there is no letter in’banana’with the index 6. Since\nwe started counting at zero, the six letters are numbered 0 to 5. To get the last character,",
+    "context_ids": [
+      "14910f352ec10d9fdcdcc227febdee52",
+      "05d9cb659795b20d5c946afb2a0b0216",
+      "5f7e7d7b3f4b11ac0d5c5ae638959407"
+    ],
+    "context_chars": 1150,
+    "elapsed_ms": 1390.2250999963144,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "test_q02",
+    "split": "test",
+    "question": "Khi hai toán hạng đều là chuỗi, toán tử in trả về True trong điều kiện nào?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 1600,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 98,
+        "evidence": "The wordinis a boolean operator that takes two strings and returnsTrueif the first ap-\npears as a substring in the second:"
+      }
+    ],
+    "results": [
+      {
+        "id": "7c7206f7ee338d024c2d43b963b7fd2f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 123,
+        "text": "2])\nTrue\n>>> is_sorted(['b','a'])\nFalse",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 438,
+          "language": "en",
+          "start_char": 399,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03225806451612903,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.5293862188594081,
+          "tfidf": 0.3728859613830518
+        },
+        "hit": false
+      },
+      {
+        "id": "b6dc1e78a5284cb1591526ce264b7414",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 138,
+        "text": "the first element from each sequence. If they are equal, it goes on to the next elements, and\nso on, until it finds elements that differ. Subsequent elements are not considered (even if\nthey are really big).\n>>> (0, 1, 2) < (0, 3, 4)\nTrue\n>>> (0, 1, 2000000) < (0, 3, 4)\nTrue",
+        "metadata": {
+          "chapter": 12,
+          "chunking": "paragraph_line",
+          "end_char": 1207,
+          "language": "en",
+          "start_char": 932,
+          "chapter_title": "Tuples"
+        },
+        "score": 0.03131881575727918,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 7
+        },
+        "retriever_scores": {
+          "dense": 0.5705943023450014,
+          "tfidf": 0.2098548839219232
+        },
+        "hit": false
+      },
+      {
+        "id": "7efdb8b01db5090879f89dec682b1dc1",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 108,
+        "text": "len(word) <= 1:\nreturn True",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 522,
+          "language": "en",
+          "start_char": 495,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.01639344262295082,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "tfidf": 0.44234194792032466
+        },
+        "hit": false
+      }
+    ],
+    "context": "[7c7206f7ee338d024c2d43b963b7fd2f | starter\\data\\raw\\thinkpython2.pdf | page 123]\n2])\nTrue\n>>> is_sorted(['b','a'])\nFalse\n\n[b6dc1e78a5284cb1591526ce264b7414 | starter\\data\\raw\\thinkpython2.pdf | page 138]\nthe first element from each sequence. If they are equal, it goes on to the next elements, and\nso on, until it finds elements that differ. Subsequent elements are not considered (even if\nthey are really big).\n>>> (0, 1, 2) < (0, 3, 4)\nTrue\n>>> (0, 1, 2000000) < (0, 3, 4)\nTrue\n\n[7efdb8b01db5090879f89dec682b1dc1 | starter\\data\\raw\\thinkpython2.pdf | page 108]\nlen(word) <= 1:\nreturn True",
+    "context_ids": [
+      "7c7206f7ee338d024c2d43b963b7fd2f",
+      "b6dc1e78a5284cb1591526ce264b7414",
+      "7efdb8b01db5090879f89dec682b1dc1"
+    ],
+    "context_chars": 591,
+    "elapsed_ms": 328.2915000017965,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "test_q03",
+    "split": "test",
+    "question": "Theo sách, append và extend khác nhau như thế nào về những phần tử được thêm vào list?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 1600,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 114,
+        "evidence": "Python provides methods that operate on lists. For example,appendadds a new element\nto the end of a list:\n>>> t = ['a','b','c']\n>>> t.append('d')\n>>> t\n['a','b','c','d']\nextendtakes a list as an argument and appends all of the elements:"
+      }
+    ],
+    "results": [
+      {
+        "id": "54563f7f73a8c4bc5ad1db69c082838d",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 130,
+        "text": "asingleton(a list that contains a single element). Otherwise we have seen\nthis value before, so we append the corresponding key to the list.\nHere is an example:",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 499,
+          "language": "en",
+          "start_char": 339,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.03252247488101534,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "dense": 0.5600555443813415,
+          "tfidf": 0.21901805812794245
+        },
+        "hit": false
+      },
+      {
+        "id": "e564b25d396985e8aa898422723bd760",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 119,
+        "text": "Since the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line",
+          "end_char": 1291,
+          "language": "en",
+          "start_char": 939,
+          "chapter_title": "Lists"
+        },
+        "score": 0.031099324975891997,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 8
+        },
+        "retriever_scores": {
+          "dense": 0.584358811378479,
+          "tfidf": 0.12751971742440765
+        },
+        "hit": false
+      },
+      {
+        "id": "821667ea2b810277e5a13f9c5e1b490e",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 114,
+        "text": "t1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1096,
+          "language": "en",
+          "start_char": 916,
+          "chapter_title": "Lists"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "tfidf": 0.2132336077900181
+        },
+        "hit": false
+      }
+    ],
+    "context": "[54563f7f73a8c4bc5ad1db69c082838d | starter\\data\\raw\\thinkpython2.pdf | page 130]\nasingleton(a list that contains a single element). Otherwise we have seen\nthis value before, so we append the corresponding key to the list.\nHere is an example:\n\n[e564b25d396985e8aa898422723bd760 | starter\\data\\raw\\thinkpython2.pdf | page 119]\nSince the list is shared by two frames, I drew it between them.\nIt is important to distinguish between operations that modify lists and operations that cre-\nate new lists. For example, theappendmethod modifies a list, but the+operator creates a\nnew list.\nHere’s an example usingappend:\n>>> t1 = [1, 2]\n>>> t2 = t1.append(3)\n>>> t1\n[1, 2, 3]\n>>> t2\nNone\n\n[821667ea2b810277e5a13f9c5e1b490e | starter\\data\\raw\\thinkpython2.pdf | page 114]\nt1.extend(t2)\n>>> t1\n['a','b','c','d','e']\nThis example leavest2unmodified.\nsortarranges the elements of the list from low to high:\n>>> t = ['d','c','e','b','a']\n>>> t.sort()\n>>> t",
+    "context_ids": [
+      "54563f7f73a8c4bc5ad1db69c082838d",
+      "e564b25d396985e8aa898422723bd760",
+      "821667ea2b810277e5a13f9c5e1b490e"
+    ],
+    "context_chars": 942,
+    "elapsed_ms": 281.88520000549033,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "test_q04",
+    "split": "test",
+    "question": "Muốn kiểm tra 'uno' xuất hiện trong các giá trị của dictionary eng2sp thay vì kiểm tra khóa, sách dùng phương thức nào trước phép in?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 1600,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 126,
+        "evidence": "To see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue"
+      }
+    ],
+    "results": [
+      {
+        "id": "4584c2a3416bda8c0ba5e572fe0f008f",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 126,
+        "text": "104 Chapter 11. Dictionaries\n>>> eng2sp = {'one':'uno','two':'dos','three':'tres'}\nBut if you printeng2sp, you might be surprised:\n>>> eng2sp\n{'one':'uno','three':'tres','two':'dos'}\nThe order of the key-value pairs might not be the same. If you type the same example\non your computer, you might get a different result. In general, the order of items in a\ndictionary is",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 369,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.03200204813108039,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 3
+        },
+        "retriever_scores": {
+          "dense": 0.6175648158062942,
+          "tfidf": 0.2144499854581951
+        },
+        "hit": false
+      },
+      {
+        "id": "ea1fdb7aaae473ec200e4412fa125712",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 126,
+        "text": "in the dictionary (appearing as a value is not good enough).\n>>>'one'in eng2sp\nTrue\n>>>'uno'in eng2sp\nFalse\nTo see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue\nTheinoperator uses different algorithms for lists and dictionaries. For lists, it searches the",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 1347,
+          "language": "en",
+          "start_char": 939,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.0315136476426799,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 5,
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "dense": 0.559992330074082,
+          "tfidf": 0.2866473119143037
+        },
+        "hit": true
+      },
+      {
+        "id": "cc053a99e662f933628d3998da6ac7e0",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 125,
+        "text": "This line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+        "metadata": {
+          "chapter": 11,
+          "chunking": "paragraph_line",
+          "end_char": 1485,
+          "language": "en",
+          "start_char": 1184,
+          "chapter_title": "Dictionaries"
+        },
+        "score": 0.03149801587301587,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 3,
+          "tfidf": 4
+        },
+        "retriever_scores": {
+          "dense": 0.5911359610815083,
+          "tfidf": 0.2057049734257883
+        },
+        "hit": false
+      }
+    ],
+    "context": "[4584c2a3416bda8c0ba5e572fe0f008f | starter\\data\\raw\\thinkpython2.pdf | page 126]\n104 Chapter 11. Dictionaries\n>>> eng2sp = {'one':'uno','two':'dos','three':'tres'}\nBut if you printeng2sp, you might be surprised:\n>>> eng2sp\n{'one':'uno','three':'tres','two':'dos'}\nThe order of the key-value pairs might not be the same. If you type the same example\non your computer, you might get a different result. In general, the order of items in a\ndictionary is\n\n[ea1fdb7aaae473ec200e4412fa125712 | starter\\data\\raw\\thinkpython2.pdf | page 126]\nin the dictionary (appearing as a value is not good enough).\n>>>'one'in eng2sp\nTrue\n>>>'uno'in eng2sp\nFalse\nTo see whether something appears as a value in a dictionary, you can use the method\nvalues, which returns a collection of values, and then use theinoperator:\n>>> vals = eng2sp.values()\n>>>'uno'in vals\nTrue\nTheinoperator uses different algorithms for lists and dictionaries. For lists, it searches the\n\n[cc053a99e662f933628d3998da6ac7e0 | starter\\data\\raw\\thinkpython2.pdf | page 125]\nThis line creates an item that maps from the key'one'to the value'uno'. If we print the\ndictionary again, we see a key-value pair with a colon between the key and value:\n>>> eng2sp\n{'one':'uno'}\nThis output format is also an input format. For example, you can create a new dictionary\nwith three items:",
+    "context_ids": [
+      "4584c2a3416bda8c0ba5e572fe0f008f",
+      "ea1fdb7aaae473ec200e4412fa125712",
+      "cc053a99e662f933628d3998da6ac7e0"
+    ],
+    "context_chars": 1328,
+    "elapsed_ms": 465.72220000234665,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "test_q05",
+    "split": "test",
+    "question": "Với list, toán tử + và toán tử * có tác dụng gì? Trong ví dụ của sách, [0] * 4 cho kết quả nào?",
+    "strategy": "hybrid",
+    "top_k": 3,
+    "budget_chars": 1600,
+    "gold": [
+      {
+        "source_id": "thinkpython2-v2.4.1",
+        "page": 113,
+        "evidence": "The+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]"
+      }
+    ],
+    "results": [
+      {
+        "id": "fdd6814315e19e373edd44f792c84c2d",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 113,
+        "text": "10.4 List operations\nThe+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]\n>>> [1, 2, 3] * 3\n[1, 2, 3, 1, 2, 3, 1, 2, 3]\nThe first example repeats[0]four times. The second example repeats the",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 1414,
+          "language": "en",
+          "start_char": 1091,
+          "chapter_title": "Lists"
+        },
+        "score": 0.03278688524590164,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 1,
+          "tfidf": 1
+        },
+        "retriever_scores": {
+          "dense": 0.6167156790795851,
+          "tfidf": 0.45648186091831777
+        },
+        "hit": true
+      },
+      {
+        "id": "1cc50b7db608a745df114d78a62d9452",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 120,
+        "text": "98 Chapter 10. Lists\nThe return value fromappendisNone.\nHere’s an example using the+operator:\n>>> t3 = t1 + [4]\n>>> t1\n[1, 2, 3]\n>>> t3\n[1, 2, 3, 4]\nThe result of the operator is a new list, and the original list is unchanged.\nThis difference is important when you write functions that are supposed to modify lists.\nFor example, this functiondoes notdelete the head of a list:\ndef bad_delete_head(t):\nt = t[1:] #",
+        "metadata": {
+          "chapter": 10,
+          "chunking": "paragraph_line+token_guard",
+          "end_char": 412,
+          "language": "en",
+          "start_char": 0,
+          "chapter_title": "Lists"
+        },
+        "score": 0.0304147465437788,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "dense": 2,
+          "tfidf": 10
+        },
+        "retriever_scores": {
+          "dense": 0.5960603293234428,
+          "tfidf": 0.22009734574576867
+        },
+        "hit": false
+      },
+      {
+        "id": "e5a9323df68d9a087cf106a84ed1510a",
+        "source_id": "thinkpython2-v2.4.1",
+        "source": "starter\\data\\raw\\thinkpython2.pdf",
+        "page": 110,
+        "text": "“I was driving on the highway the other day and I happened to notice my odometer.\nLike most odometers, it shows six digits, in whole miles only. So, if my car had 300,000\nmiles, for example, I’d see 3-0-0-0-0-0.\n“Now, what I saw that day was very interesting. I noticed that the last 4 digits were\npalindromic; that is, they read the same forward as backward. For example, 5-4-4-5 is a\npalindrome, so my odometer could have read 3-1-5-4-4-5.",
+        "metadata": {
+          "chapter": 9,
+          "chunking": "paragraph_line",
+          "end_char": 1337,
+          "language": "en",
+          "start_char": 896,
+          "chapter_title": "Case study: word play"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid",
+        "retriever_ranks": {
+          "tfidf": 2
+        },
+        "retriever_scores": {
+          "tfidf": 0.36542754608470196
+        },
+        "hit": false
+      }
+    ],
+    "context": "[fdd6814315e19e373edd44f792c84c2d | starter\\data\\raw\\thinkpython2.pdf | page 113]\n10.4 List operations\nThe+operator concatenates lists:\n>>> a = [1, 2, 3]\n>>> b = [4, 5, 6]\n>>> c = a + b\n>>> c\n[1, 2, 3, 4, 5, 6]\nThe*operator repeats a list a given number of times:\n>>> [0] * 4\n[0, 0, 0, 0]\n>>> [1, 2, 3] * 3\n[1, 2, 3, 1, 2, 3, 1, 2, 3]\nThe first example repeats[0]four times. The second example repeats the\n\n[1cc50b7db608a745df114d78a62d9452 | starter\\data\\raw\\thinkpython2.pdf | page 120]\n98 Chapter 10. Lists\nThe return value fromappendisNone.\nHere’s an example using the+operator:\n>>> t3 = t1 + [4]\n>>> t1\n[1, 2, 3]\n>>> t3\n[1, 2, 3, 4]\nThe result of the operator is a new list, and the original list is unchanged.\nThis difference is important when you write functions that are supposed to modify lists.\nFor example, this functiondoes notdelete the head of a list:\ndef bad_delete_head(t):\nt = t[1:] #\n\n[e5a9323df68d9a087cf106a84ed1510a | starter\\data\\raw\\thinkpython2.pdf | page 110]\n“I was driving on the highway the other day and I happened to notice my odometer.\nLike most odometers, it shows six digits, in whole miles only. So, if my car had 300,000\nmiles, for example, I’d see 3-0-0-0-0-0.\n“Now, what I saw that day was very interesting. I noticed that the last 4 digits were\npalindromic; that is, they read the same forward as backward. For example, 5-4-4-5 is a\npalindrome, so my odometer could have read 3-1-5-4-4-5.",
+    "context_ids": [
+      "fdd6814315e19e373edd44f792c84c2d",
+      "1cc50b7db608a745df114d78a62d9452",
+      "e5a9323df68d9a087cf106a84ed1510a"
+    ],
+    "context_chars": 1426,
+    "elapsed_ms": 381.26370000099996,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  }
+]

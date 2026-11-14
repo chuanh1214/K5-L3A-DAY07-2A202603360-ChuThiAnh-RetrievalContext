@@ -1,0 +1,38 @@
+[
+  {
+    "strategy": "tfidf",
+    "split": "test",
+    "n": 5,
+    "hit1": 1,
+    "hit3": 3,
+    "context_hit": 3,
+    "avg_context_chars": 982.2,
+    "median_ms": 19.734599998628255,
+    "retriever_setup_seconds": 181.5474069999982,
+    "top_k": 3,
+    "budget_chars": 1600,
+    "candidate_k": 3,
+    "rrf_k": null,
+    "filter_policy": "none",
+    "service_cost_usd": 0,
+    "note": "One original query per question; not a multi-turn agent evaluation."
+  },
+  {
+    "strategy": "hybrid",
+    "split": "test",
+    "n": 5,
+    "hit1": 1,
+    "hit3": 3,
+    "context_hit": 3,
+    "avg_context_chars": 1087.4,
+    "median_ms": 381.26370000099996,
+    "retriever_setup_seconds": 49.67080740000529,
+    "top_k": 3,
+    "budget_chars": 1600,
+    "candidate_k": 10,
+    "rrf_k": 60,
+    "filter_policy": "none",
+    "service_cost_usd": 0,
+    "note": "One original query per question; not a multi-turn agent evaluation."
+  }
+]

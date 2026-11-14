@@ -1,0 +1,202 @@
+[
+  {
+    "query_id": "q01",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 94 trực tiếp nêu chỉ số âm đếm từ cuối và ví dụ fruit[-1], fruit[-2].",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "b1ab56c6426c8ed5ec9282c015f74d93, trang 94: hỗ trợ quy tắc và ví dụ."
+    ]
+  },
+  {
+    "query_id": "q02",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context có ví dụ fruit[1.5] và lỗi TypeError vì index phải là integer.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "8ee3c32328f6b12af88d43507d83ef0b, trang 94: hỗ trợ trực tiếp nguyên nhân và thông báo lỗi."
+    ]
+  },
+  {
+    "query_id": "q03",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ cho câu hỏi vì sao không gán ký tự được: tiêu đề Strings are immutable và ví dụ lỗi item assignment hỗ trợ nguyên nhân. Không bắt buộc nêu cách tạo chuỗi mới vì câu hỏi không yêu cầu giải pháp.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "2bae53eeca782ab89f45628641cf0045, trang 96: có tiêu đề immutable, phép gán greeting[0], TypeError và giải thích object/item."
+    ]
+  },
+  {
+    "query_id": "q04",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 98 giải thích phạm vi không bao gồm end và sự nhất quán với slice; end là đối số thứ ba trong ví dụ find(sub, start, end).",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "8244e78c77b3fdf58c0397a2f7b4d1ba, trang 98: hỗ trợ quy tắc end-exclusive và ví dụ ba đối số."
+    ]
+  },
+  {
+    "query_id": "q06",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: readline đọc đến newline và trả string được nêu trực tiếp ở trang 105.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "913eb0b827a2af56f2a765320ab9c2b7, trang 105: mô tả chính xác phương thức và giá trị trả về."
+    ]
+  },
+  {
+    "query_id": "q07",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: hai đoạn trang 106 có giải thích bỏ newline bằng strip và ví dụ line.strip() trong vòng lặp đọc từ.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "0d2e210930428930c52375dd962f1186, trang 106: nêu strip để bỏ newline và ví dụ gọi.",
+      "0e0e5c6e2351d8abed9d5c8404dcba46, trang 106: có line.strip() trong vòng lặp; tên words.txt được đoạn đi kèm xác nhận."
+    ]
+  },
+  {
+    "query_id": "q08",
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: trang 106 nêu mọi ký tự required ít nhất một lần. Hai citation được đặt chung sau mô tả thuật toán và bổ sung nhau: d5286a35b8295c70831a21d22ef13cd6 giải thích thiếu ký tự thì False, 50d3699021a4cdd41f6e335447b0f1b6 xác nhận duyệt required và đảo vai trò tham số. Không coi đoạn code bị cắt là chứng minh độc lập cho toàn bộ thuật toán.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "0d52e4dc4e3409b706503f63aa699aea, trang 106: nêu điều kiện trả True đầy đủ.",
+      "d5286a35b8295c70831a21d22ef13cd6, trang 107: giải thích ký tự required không có trong word thì False và có phần kết thúc code.",
+      "50d3699021a4cdd41f6e335447b0f1b6, trang 107: hỗ trợ phần duyệt required trong nhóm hai citation; phần nhánh trả về phải đọc cùng d5286a35b8295c70831a21d22ef13cd6."
+    ]
+  },
+  {
+    "query_id": "q09",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: dù không chứa gold trang 112, context có evidence tương đương: string item assignment lỗi ở trang 96 và list mutable/danh sách ký tự ở trang 143.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "2bae53eeca782ab89f45628641cf0045, trang 96: hỗ trợ string immutable và ví dụ lỗi gán ký tự.",
+      "bff571429fa1b7f66b52d2374846e72c, trang 143: nêu dùng list ký tự khi cần sửa và lists mutable."
+    ]
+  },
+  {
+    "query_id": "q10",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: context trang 114 có sort sắp xếp list, list methods sửa list và trả None, cùng cảnh báo t = t.sort(). Việc t nhận None là suy luận trực tiếp từ phép gán.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "e837a534a33c9d9c42c4f293bf000344, trang 114: hỗ trợ trả None và phép gán sai; đoạn 821667ea2b810277e5a13f9c5e1b490e trong context hỗ trợ chức năng sort."
+    ]
+  },
+  {
+    "query_id": "q11",
+    "citation_support": [
+      true
+    ],
+    "reason": "Đúng và đủ: pop xóa, trả phần tử cuối khi không có index, đồng thời sửa list, có nguyên văn trong context.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "358ace752b82138a0af81e54d86037d6, trang 116: hỗ trợ đầy đủ mọi khẳng định của câu trả lời."
+    ]
+  },
+  {
+    "query_id": "q12",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: hai đoạn trang 117 cùng chứng minh gọi join trên delimiter string, truyền list và dùng delimiter rỗng nếu không muốn khoảng trắng.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "060dff8e3159ea9152799639bb68c2eb, trang 117: hỗ trợ delimiter và tham số list trong nhóm citation chung.",
+      "e9cb1a022110108f4b7b88897c3a17ab, trang 117: có delimiter.join(t) và hướng dẫn chuỗi rỗng làm delimiter."
+    ]
+  },
+  {
+    "query_id": "q13",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: equivalent không suy ra identical. Khác câu trả lời TF-IDF, câu này đặt điều kiện hai biến cùng tham chiếu một object và chỉ nêu b = a như ví dụ, không khẳng định đây là cách duy nhất tạo alias.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "d47d0792b790af695fbd82c66b898760, trang 118: hỗ trợ phân biệt giá trị và identity.",
+      "f7948d3f5018303dcd6369324d75fba1, trang 118: giải thích hai tham chiếu tới cùng object và ví dụ b = a."
+    ]
+  },
+  {
+    "query_id": "q14",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ: get trả default khi thiếu key; đoạn khác trong context hỗ trợ so sánh với truy cập ngoặc vuông gây KeyError.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "d3f1db77682411be501d0bff70424c22, trang 127: nêu đầy đủ quy tắc get.",
+      "2ca87670aa0a333e820e4c5c43c35d32, trang 126: có eng2sp['four'] và KeyError khi key không có."
+    ]
+  },
+  {
+    "query_id": "q15",
+    "citation_support": [
+      true,
+      true,
+      true
+    ],
+    "reason": "Đúng và đủ theo nội dung tài liệu: giải thích key phải hashable, mutable list không hashable và cơ chế hash bị ảnh hưởng khi key đổi. Hướng dùng tuple được nguồn nêu trong phạm vi ví dụ; không diễn giải rằng mọi tuple chứa phần tử bất kỳ đều hashable.",
+    "answer_grade": 2,
+    "context_grade": 2,
+    "citation_reasons": [
+      "412d0321c79b9750049765afeec019da, trang 130: giải thích hash values và vị trí thay đổi khi sửa key.",
+      "30ec1f1e388ae9933a71e1e9deb745ba, trang 130: nêu không tìm thấy key, yêu cầu hashable và gợi ý tuple.",
+      "36fc7412ab05842da8dd048e69f348b5, trang 134: định nghĩa hashable và nêu list/dictionary không hashable."
+    ]
+  },
+  {
+    "query_id": "dev_u01",
+    "citation_support": [],
+    "reason": "Từ chối đúng sau retrieval: context chỉ có quy tắc pop và ví dụ trong sách, không có nội dung numbers của phiên chạy người hỏi. Câu trả lời cuối không đoán giá trị cụ thể, citations rỗng.",
+    "abstention_correct": true,
+    "citation_reasons": []
+  },
+  {
+    "query_id": "dev_u02",
+    "citation_support": [],
+    "reason": "Từ chối đúng sau retrieval: context chỉ có kiến thức và ví dụ dictionary, không có trạng thái profile của người hỏi. Không dùng name='bob' trong ví dụ khác để đoán profile['name']; câu trả lời cuối từ chối, citations rỗng.",
+    "abstention_correct": true,
+    "citation_reasons": []
+  }
+]
